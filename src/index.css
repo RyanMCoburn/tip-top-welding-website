@@ -1,0 +1,868 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --color-navy-950: var(--theme-navy-950);
+  --color-navy-900: var(--theme-navy-900);
+  --color-navy-800: var(--theme-navy-800);
+  --color-navy-700: var(--theme-navy-700);
+  --color-charcoal: var(--theme-charcoal);
+  --color-steel-600: var(--theme-steel-600);
+  --color-steel-500: var(--theme-steel-500);
+  --color-steel-400: var(--theme-steel-400);
+  --color-steel-300: var(--theme-steel-300);
+  --color-steel-200: var(--theme-steel-200);
+  --color-accent: var(--theme-accent);
+  --color-accent-hover: var(--theme-accent-hover);
+  --color-white: var(--theme-text-strong);
+  --font-sans: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Dark mode (default) — black / chrome / blue */
+:root,
+[data-theme='dark'] {
+  color-scheme: dark;
+  --theme-navy-950: #050508;
+  --theme-navy-900: #0a0e14;
+  --theme-navy-800: #111820;
+  --theme-navy-700: #1c2636;
+  --theme-charcoal: #1e2533;
+  --theme-steel-600: #64748b;
+  --theme-steel-500: #64748b;
+  --theme-steel-400: #94a3b8;
+  --theme-steel-300: #b8c5d4;
+  --theme-steel-200: #d4dce6;
+  --theme-text-strong: #ffffff;
+  --theme-accent: #4a9eff;
+  --theme-accent-hover: #3b8de8;
+  --theme-placeholder-from: #0a1628;
+  --theme-placeholder-via: #111d33;
+  --theme-placeholder-to: #1a2a45;
+  --theme-placeholder-shine: rgba(148, 163, 184, 0.08);
+}
+
+/* Light mode — warm off-white, navy text, steel borders */
+[data-theme='light'] {
+  color-scheme: light;
+  --theme-navy-950: #eef1f6;
+  --theme-navy-900: #ffffff;
+  --theme-navy-800: #f4f6f9;
+  --theme-navy-700: #c5d0dc;
+  --theme-charcoal: #1e293b;
+  --theme-steel-600: #475569;
+  --theme-steel-500: #64748b;
+  --theme-steel-400: #334155;
+  --theme-steel-300: #1e293b;
+  --theme-steel-200: #0f172a;
+  --theme-text-strong: #0a1628;
+  --theme-accent: #1d4ed8;
+  --theme-accent-hover: #1e40af;
+  --theme-placeholder-from: #e4e8ee;
+  --theme-placeholder-via: #d8dee8;
+  --theme-placeholder-to: #ccd4e0;
+  --theme-placeholder-shine: rgba(10, 22, 40, 0.07);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+header,
+footer,
+main,
+section,
+article,
+nav,
+aside {
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.2s ease;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--theme-navy-950);
+  color: var(--theme-steel-300);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--theme-accent);
+  color: var(--theme-navy-950);
+}
+
+[data-theme='light'] ::selection {
+  color: #ffffff;
+}
+
+/* =============================================================================
+   Hero banner — premium split layout with welder cutout (theme-aware bg)
+   ============================================================================= */
+
+.hero-banner {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  align-items: center;
+  gap: 2rem;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding: clamp(5rem, 11vw, 7.5rem) 1rem clamp(3.5rem, 7vw, 5.5rem);
+  min-height: clamp(580px, 84vh, 900px);
+}
+
+@media (min-width: 1024px) {
+  .hero-inner {
+    grid-template-columns: minmax(0, 52fr) minmax(0, 48fr);
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+    padding-inline: 2rem;
+    overflow: visible;
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  min-width: 0;
+}
+
+.hero-visual {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  min-height: 260px;
+}
+
+@media (min-width: 1024px) {
+  .hero-visual {
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 0;
+  }
+}
+
+/* Light mode — hide welder until a true transparent PNG is available */
+[data-theme='light'] .hero-visual--dark-only {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  [data-theme='light'] .hero-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Brushed metal + theme backgrounds */
+.hero-metal-brush {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.85;
+  background:
+    linear-gradient(
+      105deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.04) 22%,
+      transparent 44%,
+      rgba(255, 255, 255, 0.03) 66%,
+      transparent 88%
+    ),
+    repeating-linear-gradient(
+      92deg,
+      rgba(255, 255, 255, 0.018) 0px,
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+}
+
+:root .hero-banner,
+[data-theme='dark'] .hero-banner {
+  background:
+    radial-gradient(ellipse 50% 42% at 78% 35%, rgba(74, 158, 255, 0.22) 0%, transparent 58%),
+    radial-gradient(ellipse 30% 25% at 72% 38%, rgba(255, 170, 60, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse 35% 30% at 15% 80%, rgba(74, 158, 255, 0.08) 0%, transparent 52%),
+    linear-gradient(168deg, #010102 0%, #050608 24%, #0a0e14 55%, #0c1420 100%);
+}
+
+:root .hero-banner::before,
+[data-theme='dark'] .hero-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.024) 0px,
+      rgba(255, 255, 255, 0.024) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.35) 0%, transparent 42%);
+}
+
+[data-theme='light'] .hero-banner {
+  background:
+    radial-gradient(ellipse 55% 45% at 78% 30%, rgba(37, 99, 235, 0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 28% 22% at 74% 35%, rgba(255, 160, 50, 0.08) 0%, transparent 48%),
+    radial-gradient(ellipse 40% 35% at 10% 85%, rgba(37, 99, 235, 0.06) 0%, transparent 50%),
+    linear-gradient(175deg, #f8fafc 0%, #eef2f7 35%, #e4eaf2 68%, #d8e0ea 100%);
+}
+
+[data-theme='light'] .hero-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      rgba(10, 22, 40, 0.03) 0px,
+      rgba(10, 22, 40, 0.03) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, transparent 45%);
+}
+
+[data-theme='light'] .hero-metal-brush {
+  opacity: 1;
+  background:
+    linear-gradient(108deg, transparent 0%, rgba(10, 22, 40, 0.035) 25%, transparent 50%, rgba(10, 22, 40, 0.03) 75%, transparent 100%),
+    repeating-linear-gradient(93deg, rgba(10, 22, 40, 0.02) 0px, rgba(10, 22, 40, 0.02) 1px, transparent 1px, transparent 5px);
+}
+
+.hero-banner::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--theme-accent), transparent);
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.hero-chrome-lines {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(135deg, transparent 58%, rgba(148, 163, 184, 0.06) 58.2%, transparent 58.5%),
+    linear-gradient(125deg, transparent 74%, rgba(74, 158, 255, 0.08) 74.1%, transparent 74.4%);
+}
+
+[data-theme='light'] .hero-chrome-lines {
+  background:
+    linear-gradient(135deg, transparent 58%, rgba(10, 22, 40, 0.04) 58.2%, transparent 58.5%),
+    linear-gradient(125deg, transparent 74%, rgba(37, 99, 235, 0.06) 74.1%, transparent 74.4%);
+}
+
+/* Blueprint outlines */
+.hero-blueprint {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  color: rgba(148, 163, 184, 0.07);
+}
+
+.hero-blueprint-bow {
+  left: -2%;
+  bottom: 6%;
+  width: min(380px, 55vw);
+  height: auto;
+}
+
+.hero-blueprint-rail {
+  left: 8%;
+  top: 18%;
+  width: min(260px, 38vw);
+  height: auto;
+  opacity: 0.65;
+}
+
+.hero-blueprint-marina {
+  right: 4%;
+  bottom: 12%;
+  width: min(300px, 42vw);
+  height: auto;
+  opacity: 0.5;
+}
+
+@media (min-width: 1024px) {
+  .hero-blueprint-marina {
+    display: none;
+  }
+
+  .hero-blueprint-rail {
+    left: 4%;
+    top: 22%;
+    opacity: 0.45;
+  }
+}
+
+[data-theme='light'] .hero-blueprint {
+  color: rgba(10, 22, 40, 0.06);
+}
+
+/* Welder image — layout only; no filters, masks, blend modes, or theme overrides */
+.hero-welder-stage {
+  position: relative;
+  z-index: 1;
+  line-height: 0;
+}
+
+.hero-welder-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+@media (min-width: 1024px) {
+  .hero-welder-stage {
+    width: min(72vw, 1040px);
+    margin-right: clamp(-5rem, -8vw, -2rem);
+    margin-bottom: clamp(-2.5rem, -4vh, 0);
+    flex-shrink: 0;
+  }
+
+  .hero-welder-img {
+    width: min(72vw, 1040px);
+  }
+}
+
+@media (max-width: 1023px) {
+  .hero-welder-stage {
+    width: min(100%, 560px);
+    margin-inline: auto;
+  }
+}
+
+/* Weld arc pulse — weld point only */
+.hero-weld-glow-arc {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  top: 44%;
+  left: 36%;
+  width: 18%;
+  height: 18%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(180, 220, 255, 0.85) 0%,
+    rgba(74, 158, 255, 0.4) 40%,
+    transparent 72%
+  );
+  filter: blur(25px);
+  opacity: 0.35;
+  animation: weldPulse 4s ease-in-out infinite;
+}
+
+@keyframes weldPulse {
+  0%,
+  100% {
+    opacity: 0.28;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.42;
+    transform: translate(-50%, -50%) scale(1.06);
+  }
+}
+
+/* Hero typography */
+.hero-title {
+  color: #ffffff;
+}
+
+.hero-subtitle {
+  color: var(--theme-steel-300);
+}
+
+.hero-service-line {
+  color: var(--theme-steel-400);
+}
+
+.hero-tags {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-tags li {
+  display: inline-block;
+  border-radius: 0.375rem;
+  border: 1px solid color-mix(in srgb, var(--theme-navy-700) 85%, var(--theme-accent));
+  background: color-mix(in srgb, var(--theme-navy-900) 45%, transparent);
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  color: var(--theme-steel-300);
+  backdrop-filter: blur(6px);
+  transition:
+    border-color 0.28s ease,
+    box-shadow 0.28s ease,
+    background-color 0.28s ease;
+}
+
+.hero-tags li:hover {
+  border-color: color-mix(in srgb, var(--theme-accent) 55%, var(--theme-navy-700));
+  box-shadow: 0 0 14px color-mix(in srgb, var(--theme-accent) 18%, transparent);
+}
+
+@media (min-width: 768px) {
+  .hero-tags li {
+    font-size: 0.875rem;
+  }
+}
+
+[data-theme='light'] .hero-title {
+  color: #0a1628;
+}
+
+[data-theme='light'] .hero-subtitle {
+  color: #1e3348;
+}
+
+[data-theme='light'] .hero-service-line {
+  color: #334155;
+}
+
+[data-theme='light'] .hero-tags li {
+  border-color: color-mix(in srgb, #0a1628 14%, #c5d0dc);
+  background: color-mix(in srgb, white 78%, transparent);
+  color: #1e3348;
+}
+
+[data-theme='light'] .hero-tags li:hover {
+  border-color: color-mix(in srgb, var(--theme-accent) 45%, #c5d0dc);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--theme-accent) 12%, transparent);
+}
+
+/* Hero CTA hover — lift + blue glow */
+.hero-banner .hero-cta.btn-cta-premium:hover {
+  transform: translateY(-4px);
+}
+
+.hero-banner .hero-cta.btn-cta-primary:hover {
+  box-shadow:
+    0 18px 42px rgba(74, 158, 255, 0.48),
+    0 0 28px rgba(74, 158, 255, 0.22),
+    0 0 0 1px color-mix(in srgb, var(--theme-accent) 35%, transparent);
+}
+
+.hero-banner .hero-cta.btn-cta-outline:hover,
+.hero-banner .hero-cta.bg-navy-800:hover {
+  box-shadow:
+    0 12px 28px rgba(74, 158, 255, 0.22),
+    0 0 0 1px color-mix(in srgb, var(--theme-accent) 25%, transparent);
+}
+
+[data-theme='light'] .hero-banner .hero-cta.btn-cta-primary:hover {
+  box-shadow:
+    0 14px 30px rgba(37, 99, 235, 0.28),
+    0 0 0 1px color-mix(in srgb, var(--theme-accent) 25%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-weld-glow-arc {
+    animation: none;
+    opacity: 0.35;
+  }
+}
+
+@media (max-width: 1023px) {
+  .hero-visual {
+    order: 2;
+    margin-inline: auto;
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .hero-content {
+    order: 1;
+  }
+}
+
+@media (max-width: 639px) {
+  .hero-inner {
+    min-height: auto;
+    padding-top: 3.5rem;
+  }
+
+  .hero-welder-stage {
+    width: 100%;
+  }
+}
+
+
+/* Section rhythm */
+.section-space {
+  padding-block: clamp(4rem, 8vw, 6rem);
+}
+
+/* =============================================================================
+   Premium floating header — glass / chrome
+   ============================================================================= */
+
+.header-glass {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid color-mix(in srgb, var(--theme-steel-400) 22%, var(--theme-navy-700));
+  background: color-mix(in srgb, var(--theme-navy-950) 80%, transparent);
+  backdrop-filter: blur(18px) saturate(1.25);
+  -webkit-backdrop-filter: blur(18px) saturate(1.25);
+  box-shadow:
+    0 4px 28px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+[data-theme='light'] .header-glass {
+  background: color-mix(in srgb, #ffffff 76%, transparent);
+  border-bottom-color: color-mix(in srgb, #0a1628 14%, #c8d4e0);
+  box-shadow:
+    0 4px 24px rgba(10, 22, 40, 0.09),
+    inset 0 1px 0 rgba(255, 255, 255, 0.98);
+}
+
+/* =============================================================================
+   Entrance animations — subtle fade / slide-up
+   ============================================================================= */
+
+@keyframes fade-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  opacity: 0;
+  animation: fade-slide-up 0.65s ease forwards;
+}
+
+.animate-in-delay-1 {
+  animation-delay: 0.06s;
+}
+.animate-in-delay-2 {
+  animation-delay: 0.12s;
+}
+.animate-in-delay-3 {
+  animation-delay: 0.18s;
+}
+.animate-in-delay-4 {
+  animation-delay: 0.24s;
+}
+.animate-in-delay-5 {
+  animation-delay: 0.3s;
+}
+.animate-in-delay-6 {
+  animation-delay: 0.36s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-in {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* =============================================================================
+   Premium card surface + hover polish
+   ============================================================================= */
+
+.card-premium {
+  border: 1px solid var(--theme-navy-700);
+  background: color-mix(in srgb, var(--theme-navy-800) 72%, transparent);
+  backdrop-filter: blur(8px);
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease,
+    background-color 0.28s ease;
+}
+
+.card-premium:hover,
+.card-premium:focus-within {
+  transform: translateY(-7px) scale(1.012);
+  border-color: color-mix(in srgb, var(--theme-accent) 48%, var(--theme-navy-700));
+  box-shadow:
+    0 22px 44px rgba(0, 0, 0, 0.3),
+    0 0 0 1px color-mix(in srgb, var(--theme-accent) 20%, transparent),
+    0 0 28px color-mix(in srgb, var(--theme-accent) 14%, transparent);
+}
+
+[data-theme='light'] .card-premium {
+  background: color-mix(in srgb, var(--theme-navy-900) 96%, white);
+  border-color: color-mix(in srgb, #0a1628 14%, #c8d4e0);
+  box-shadow: 0 2px 8px rgba(10, 22, 40, 0.07);
+}
+
+[data-theme='light'] .card-premium:hover,
+[data-theme='light'] .card-premium:focus-within {
+  box-shadow:
+    0 20px 40px rgba(10, 22, 40, 0.12),
+    0 0 0 1px color-mix(in srgb, var(--theme-accent) 28%, transparent),
+    0 0 24px color-mix(in srgb, var(--theme-accent) 10%, transparent);
+}
+
+/* FAQ accordion cards */
+.faq-card {
+  border: 1px solid var(--theme-navy-700);
+  background: color-mix(in srgb, var(--theme-navy-800) 55%, transparent);
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease,
+    background-color 0.28s ease;
+}
+
+.faq-card:hover,
+.faq-card:focus-within {
+  transform: translateY(-6px) scale(1.008);
+  border-color: color-mix(in srgb, var(--theme-accent) 42%, var(--theme-navy-700));
+  box-shadow:
+    0 16px 36px rgba(0, 0, 0, 0.24),
+    0 0 0 1px color-mix(in srgb, var(--theme-accent) 16%, transparent),
+    0 0 20px color-mix(in srgb, var(--theme-accent) 10%, transparent);
+}
+
+[data-theme='light'] .faq-card {
+  background: color-mix(in srgb, white 92%, var(--theme-navy-800));
+  border-color: color-mix(in srgb, #0a1628 12%, #c8d4e0);
+}
+
+.faq-card button {
+  transition: color 0.2s ease;
+}
+
+.faq-card button:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--theme-accent);
+}
+
+/* Premium CTA buttons */
+.btn-cta-premium {
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease,
+    background-color 0.28s ease,
+    color 0.2s ease;
+}
+
+.btn-cta-premium:hover {
+  transform: translateY(-7px) scale(1.02);
+}
+
+.btn-cta-premium:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px var(--theme-navy-950),
+    0 0 0 4px var(--theme-accent);
+}
+
+[data-theme='light'] .btn-cta-premium:focus-visible {
+  box-shadow:
+    0 0 0 2px #ffffff,
+    0 0 0 4px var(--theme-accent);
+}
+
+[data-theme='light'] .btn-cta-primary:hover {
+  box-shadow:
+    0 16px 36px rgba(37, 99, 235, 0.28),
+    0 0 0 1px color-mix(in srgb, var(--theme-accent) 25%, transparent);
+}
+
+/* Gallery photo hover zoom */
+.gallery-photo-frame {
+  border: 1px solid var(--theme-navy-700);
+  background: var(--theme-navy-900);
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
+}
+
+.gallery-photo-card:hover .gallery-photo-frame {
+  border-color: color-mix(in srgb, var(--theme-accent) 45%, var(--theme-navy-700));
+  box-shadow:
+    0 16px 36px rgba(0, 0, 0, 0.28),
+    0 0 20px color-mix(in srgb, var(--theme-accent) 12%, transparent);
+  transform: translateY(-6px) scale(1.01);
+}
+
+.gallery-photo-img {
+  transition: transform 0.45s ease;
+}
+
+.gallery-photo-card:hover .gallery-photo-img {
+  transform: scale(1.04);
+}
+
+/* CTA buttons — light mode readability */
+[data-theme='light'] .btn-cta-outline {
+  border-color: color-mix(in srgb, var(--theme-accent) 35%, #0a1628);
+  color: #0a1628;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+[data-theme='light'] .btn-cta-outline:hover {
+  border-color: var(--theme-accent);
+  color: var(--theme-accent);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.15);
+}
+
+[data-theme='light'] .hero-banner .bg-navy-800 {
+  background-color: #0a1628;
+  color: #ffffff;
+}
+
+[data-theme='light'] .hero-banner .border-navy-700 {
+  border-color: #cbd5e1;
+}
+
+[data-theme='light'] .brand-logo-wrap {
+  background: #ffffff;
+  border-color: #d4dde6;
+  box-shadow: 0 1px 4px rgba(10, 22, 40, 0.06);
+}
+
+.brand-logo {
+  line-height: 0;
+}
+
+/* =============================================================================
+   Store sales page
+   ============================================================================= */
+
+.store-hero-shine {
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 50% 40% at 85% 20%, rgba(74, 158, 255, 0.14) 0%, transparent 55%),
+    radial-gradient(ellipse 35% 30% at 10% 80%, rgba(74, 158, 255, 0.06) 0%, transparent 50%);
+}
+
+[data-theme='light'] .store-hero-shine {
+  background:
+    radial-gradient(ellipse 50% 40% at 85% 20%, rgba(37, 99, 235, 0.1) 0%, transparent 55%),
+    radial-gradient(ellipse 35% 30% at 10% 80%, rgba(37, 99, 235, 0.05) 0%, transparent 50%);
+}
+
+.store-product-card {
+  transition:
+    border-color 0.28s ease,
+    box-shadow 0.28s ease,
+    transform 0.28s ease;
+}
+
+.store-product-card:hover {
+  border-color: color-mix(in srgb, var(--theme-accent) 28%, var(--theme-navy-700));
+}
+
+.store-product-card--highlight {
+  border-color: color-mix(in srgb, var(--theme-accent) 55%, var(--theme-navy-700));
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--theme-accent) 40%, transparent),
+    0 12px 40px color-mix(in srgb, var(--theme-accent) 18%, transparent);
+}
+
+.store-product-card__body {
+  min-height: 18rem;
+}
+
+.store-product-card__cta {
+  flex-shrink: 0;
+}
+
+.store-checkout-notice {
+  border-color: color-mix(in srgb, var(--theme-accent) 22%, var(--theme-navy-700));
+}
+
+[data-theme='light'] .store-checkout-notice {
+  background: color-mix(in srgb, var(--theme-accent) 6%, #ffffff);
+  border-color: color-mix(in srgb, var(--theme-accent) 18%, #d8e0ea);
+  color: #334155;
+}
+
+.store-step-card {
+  height: 100%;
+}
+
+[data-theme='light'] .store-section-light {
+  background: linear-gradient(180deg, #f4f7fb 0%, #eef2f7 100%);
+}
+
+[data-theme='light'] .store-section-products {
+  background: #ffffff;
+}
+
+[data-theme='light'] .store-section-light .card-premium,
+[data-theme='light'] .store-section-products .store-product-card {
+  background: #ffffff;
+  border-color: #d8e0ea;
+}
+
+[data-theme='light'] .store-section-light .store-step-card h3,
+[data-theme='light'] .store-section-products .store-product-card h3,
+[data-theme='light'] .store-section-products .store-product-card .text-2xl {
+  color: #0a1628;
+}
+
+/* Premium metal placeholder surface */
+.placeholder-metal {
+  background: linear-gradient(
+    145deg,
+    var(--theme-placeholder-from) 0%,
+    var(--theme-placeholder-via) 45%,
+    var(--theme-placeholder-to) 100%
+  );
+  border-color: var(--theme-navy-700);
+}
+
+.placeholder-metal::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      135deg,
+      var(--theme-placeholder-shine) 0px,
+      var(--theme-placeholder-shine) 1px,
+      transparent 1px,
+      transparent 10px
+    ),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, transparent 40%);
+  pointer-events: none;
+}

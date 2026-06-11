@@ -1,0 +1,137 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: public/images/uploads
+public_folder: /images/uploads
+
+site_url: https://tiptopwelding.com
+display_url: https://tiptopwelding.com
+logo_url: /images/logo/logo-dark.png
+
+locale: en
+
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: '-'
+
+collections:
+  - name: gallery
+    label: Gallery Photos
+    label_singular: Gallery Photo
+    folder: src/content/gallery
+    create: true
+    slug: '{{slug}}'
+    extension: json
+    format: json
+    summary: '{{title}} — {{category}}'
+    sortable_fields: [sortOrder, title, category]
+    fields:
+      - { label: Title, name: title, widget: string, hint: 'Short photo title, e.g. Bow Rail Repair' }
+      - label: URL slug
+        name: slug
+        widget: string
+        pattern: ['^[a-z0-9-]+$', 'Use lowercase letters, numbers, and hyphens only']
+        hint: 'Example: bow-rail-repair-cape-coral'
+      - label: Category
+        name: category
+        widget: select
+        options:
+          - Marine Repairs
+          - Bow Rails
+          - Pool Railings
+          - Mailboxes
+          - Custom Fabrication
+          - Dock & Marina
+          - Nautical Metal Art
+          - Aluminum & Stainless
+      - { label: Image, name: image, widget: image, hint: 'Upload a clear project photo (recommended 1600px wide JPG or WebP)' }
+      - { label: Alt text, name: alt, widget: string, hint: 'Describe the work for accessibility and SEO' }
+      - { label: Description, name: description, widget: text, required: false }
+      - { label: Featured, name: featured, widget: boolean, default: false, required: false }
+      - { label: Sort order, name: sortOrder, widget: number, default: 0, value_type: int, required: false, hint: 'Lower numbers appear first' }
+
+  - name: projects
+    label: Work Examples / Projects
+    label_singular: Work Example
+    folder: src/content/projects
+    create: true
+    slug: '{{slug}}'
+    extension: json
+    format: json
+    summary: '{{title}} — {{category}}'
+    sortable_fields: [sortOrder, title, category]
+    fields:
+      - { label: Title, name: title, widget: string }
+      - label: URL slug
+        name: slug
+        widget: string
+        pattern: ['^[a-z0-9-]+$', 'Use lowercase letters, numbers, and hyphens only']
+      - label: Category
+        name: category
+        widget: select
+        options:
+          - Marine Repairs
+          - Bow Rails
+          - Pool Railings
+          - Mailboxes
+          - Custom Fabrication
+          - Dock & Marina
+          - Nautical Metal Art
+          - Aluminum & Stainless
+          - Marine Welding
+          - Custom Metal Project
+      - { label: Main image, name: image, widget: image, required: false, hint: 'Primary project photo' }
+      - { label: Description, name: description, widget: text }
+      - { label: Before image, name: beforeImage, widget: image, required: false, hint: 'Optional — adds a Before & After block on Types of Work' }
+      - { label: After image, name: afterImage, widget: image, required: false, hint: 'Optional — pair with Before image' }
+      - { label: Featured, name: featured, widget: boolean, default: false, required: false, hint: 'Show in the featured project section on Types of Work' }
+      - { label: Sort order, name: sortOrder, widget: number, default: 0, value_type: int, required: false }
+
+  - name: featured_work
+    label: Homepage Featured Work
+    label_singular: Featured Work Item
+    folder: src/content/featured-work
+    create: true
+    slug: '{{slug}}'
+    extension: json
+    format: json
+    summary: '{{title}}'
+    sortable_fields: [sortOrder, title]
+    fields:
+      - { label: Title, name: title, widget: string }
+      - label: URL slug
+        name: slug
+        widget: string
+        pattern: ['^[a-z0-9-]+$', 'Use lowercase letters, numbers, and hyphens only']
+      - { label: Image, name: image, widget: image }
+      - { label: Alt text, name: alt, widget: string }
+      - { label: Description, name: description, widget: text, required: false, hint: 'Shown as the category line on the homepage card' }
+      - { label: Link, name: link, widget: string, required: false, hint: 'Optional internal path, e.g. /projects or /gallery' }
+      - { label: Sort order, name: sortOrder, widget: number, default: 0, value_type: int, required: false }
+
+  - name: settings
+    label: Site Settings
+    files:
+      - name: site
+        label: Site Settings
+        file: src/content/settings/site.json
+        fields:
+          - { label: Business name, name: businessName, widget: string, required: false, hint: 'Tip Top Welding LLC' }
+          - { label: Phone, name: phone, widget: string, required: false, hint: 'Display format, e.g. (239) 209-4929' }
+          - { label: Email, name: email, widget: string, required: false }
+          - { label: Address, name: address, widget: string, required: false }
+          - label: Service areas
+            name: serviceAreas
+            widget: list
+            required: false
+            field: { label: Area, name: area, widget: string }
+          - { label: Facebook URL, name: facebookUrl, widget: string, required: false }
+          - { label: Instagram URL, name: instagramUrl, widget: string, required: false }
+          - { label: Google Reviews URL, name: googleReviewsUrl, widget: string, required: false }
+          - label: Formspree endpoint
+            name: formspreeEndpoint
+            widget: string
+            required: false
+            hint: 'https://formspree.io/f/your-form-id — leave empty for demo mode'
