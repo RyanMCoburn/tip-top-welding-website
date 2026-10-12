@@ -1,0 +1,10 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/((?!admin(?:/|$)|assets(?:/|$)|images(?:/|$)|.*\\.[^/]+$).*)",
+      "destination": "/index.html"
+    }
+  ]
+}

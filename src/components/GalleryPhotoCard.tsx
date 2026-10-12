@@ -23,11 +23,11 @@ export default function GalleryPhotoCard({
 
   return (
     <figure className={`gallery-photo-card group ${className}`}>
-      <div className="gallery-photo-frame aspect-[4/3] overflow-hidden rounded-xl">
+      <div className="gallery-photo-frame aspect-[4/3] overflow-hidden rounded-xl bg-navy-950">
         <img
           src={src}
           alt={alt ?? label}
-          className="gallery-photo-img h-full w-full object-cover"
+          className="gallery-photo-img h-full w-full object-contain"
           loading="lazy"
         />
       </div>
