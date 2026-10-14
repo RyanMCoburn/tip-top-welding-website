@@ -1,2 +1,2 @@
 // Re-exports for backward compatibility — edit content in siteContent.ts
-export * from './siteContent'
+export * from './sitecontent'

@@ -3,7 +3,7 @@
 // =============================================================================
 
 import type { FaqItem } from '../data/models/faq'
-import { BRAND, SERVICE_AREAS, VERIFIED_CLAIMS } from './brand'
+import { BRAND, SERVICE_AREAS } from './brand'
 
 export interface StoreProduct {
   id: string
@@ -21,7 +21,7 @@ export const STORE_PAGE = {
     headline: 'Custom Marine Welding & Metalwork You Can Order Online',
     subheadline:
       'Choose a service, submit your details, and Tip Top Welding will confirm measurements, materials, timeline, and installation before work begins.',
-    trustLine: `Cape Coral, FL • Southwest Florida • Stainless & Aluminum Welding • ${VERIFIED_CLAIMS.licenseInsuranceClaim}`,
+    trustLine: 'Cape Coral, FL • Southwest Florida • Stainless & Aluminum Welding',
   },
   ordering: {
     title: 'How Ordering Works',
@@ -148,7 +148,7 @@ export const STORE_PRODUCTS: readonly StoreProduct[] = [
   {
     id: 'dolphin-mailbox-stand',
     title: 'Dolphin Mail Box Stand',
-    price: 2800,
+    price: 2500,
     description:
       'Handcrafted leaping dolphin mailbox stand in aluminum pipe with scroll-style eye detail — built for standout coastal curb appeal.',
     bestFor: 'Custom coastal curb appeal.',
@@ -163,7 +163,7 @@ export const STORE_PRODUCTS: readonly StoreProduct[] = [
   {
     id: 'burrowing-owl-mailbox-stand',
     title: 'Burrowing Owl Mailbox Stand',
-    price: 3200,
+    price: 2500,
     description:
       'Custom welded aluminum mailbox stand featuring a burrowing owl design with scroll eyes and flat bar detail — unique Southwest Florida character.',
     bestFor: 'Unique Southwest Florida curb appeal.',

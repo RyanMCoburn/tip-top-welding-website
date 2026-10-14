@@ -98,13 +98,57 @@ body {
 }
 
 /* =============================================================================
-   Hero banner — premium split layout with welder cutout (theme-aware bg)
+   Hero banner — real marina photo with text-safe gradient overlays
    ============================================================================= */
 
 .hero-banner {
   position: relative;
   overflow: hidden;
   isolation: isolate;
+}
+
+.hero-banner--photo {
+  background: #0a0e14;
+}
+
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-photo-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 58% center;
+}
+
+.hero-photo-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    to right,
+    rgba(5, 8, 12, 0.94) 0%,
+    rgba(5, 8, 12, 0.82) 34%,
+    rgba(5, 8, 12, 0.42) 58%,
+    rgba(5, 8, 12, 0.12) 78%,
+    transparent 100%
+  );
+}
+
+[data-theme='light'] .hero-photo-overlay {
+  background: linear-gradient(
+    to right,
+    rgba(248, 250, 252, 0.96) 0%,
+    rgba(238, 242, 247, 0.9) 36%,
+    rgba(228, 234, 242, 0.55) 58%,
+    rgba(228, 234, 242, 0.2) 78%,
+    transparent 100%
+  );
 }
 
 .hero-inner {
@@ -119,12 +163,14 @@ body {
   min-height: clamp(580px, 84vh, 900px);
 }
 
+.hero-inner--photo {
+  grid-template-columns: 1fr;
+  justify-items: start;
+}
+
 @media (min-width: 1024px) {
-  .hero-inner {
-    grid-template-columns: minmax(0, 52fr) minmax(0, 48fr);
-    gap: clamp(1.5rem, 3vw, 2.5rem);
+  .hero-inner--photo {
     padding-inline: 2rem;
-    overflow: visible;
   }
 }
 
@@ -132,6 +178,14 @@ body {
   position: relative;
   z-index: 5;
   min-width: 0;
+  max-width: 42rem;
+}
+
+/* Legacy decorative layers — hidden on photo hero */
+.hero-banner--photo .hero-metal-brush,
+.hero-banner--photo .hero-chrome-lines,
+.hero-banner--photo .hero-blueprint {
+  display: none;
 }
 
 .hero-visual {
@@ -152,18 +206,7 @@ body {
   }
 }
 
-/* Light mode — hide welder until a true transparent PNG is available */
-[data-theme='light'] .hero-visual--dark-only {
-  display: none;
-}
-
-@media (min-width: 1024px) {
-  [data-theme='light'] .hero-inner {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Brushed metal + theme backgrounds */
+/* Brushed metal + theme backgrounds (non-photo pages fallback) */
 .hero-metal-brush {
   position: absolute;
   inset: 0;
@@ -188,8 +231,8 @@ body {
     );
 }
 
-:root .hero-banner,
-[data-theme='dark'] .hero-banner {
+:root .hero-banner:not(.hero-banner--photo),
+[data-theme='dark'] .hero-banner:not(.hero-banner--photo) {
   background:
     radial-gradient(ellipse 50% 42% at 78% 35%, rgba(74, 158, 255, 0.22) 0%, transparent 58%),
     radial-gradient(ellipse 30% 25% at 72% 38%, rgba(255, 170, 60, 0.1) 0%, transparent 50%),
@@ -197,8 +240,8 @@ body {
     linear-gradient(168deg, #010102 0%, #050608 24%, #0a0e14 55%, #0c1420 100%);
 }
 
-:root .hero-banner::before,
-[data-theme='dark'] .hero-banner::before {
+:root .hero-banner:not(.hero-banner--photo)::before,
+[data-theme='dark'] .hero-banner:not(.hero-banner--photo)::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -215,7 +258,7 @@ body {
     linear-gradient(90deg, rgba(0, 0, 0, 0.35) 0%, transparent 42%);
 }
 
-[data-theme='light'] .hero-banner {
+[data-theme='light'] .hero-banner:not(.hero-banner--photo) {
   background:
     radial-gradient(ellipse 55% 45% at 78% 30%, rgba(37, 99, 235, 0.12) 0%, transparent 55%),
     radial-gradient(ellipse 28% 22% at 74% 35%, rgba(255, 160, 50, 0.08) 0%, transparent 48%),
@@ -223,7 +266,7 @@ body {
     linear-gradient(175deg, #f8fafc 0%, #eef2f7 35%, #e4eaf2 68%, #d8e0ea 100%);
 }
 
-[data-theme='light'] .hero-banner::before {
+[data-theme='light'] .hero-banner:not(.hero-banner--photo)::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -323,76 +366,6 @@ body {
   color: rgba(10, 22, 40, 0.06);
 }
 
-/* Welder image — layout only; no filters, masks, blend modes, or theme overrides */
-.hero-welder-stage {
-  position: relative;
-  z-index: 1;
-  line-height: 0;
-}
-
-.hero-welder-img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-width: none;
-  object-fit: contain;
-  object-position: center bottom;
-}
-
-@media (min-width: 1024px) {
-  .hero-welder-stage {
-    width: min(72vw, 1040px);
-    margin-right: clamp(-5rem, -8vw, -2rem);
-    margin-bottom: clamp(-2.5rem, -4vh, 0);
-    flex-shrink: 0;
-  }
-
-  .hero-welder-img {
-    width: min(72vw, 1040px);
-  }
-}
-
-@media (max-width: 1023px) {
-  .hero-welder-stage {
-    width: min(100%, 560px);
-    margin-inline: auto;
-  }
-}
-
-/* Weld arc pulse — weld point only */
-.hero-weld-glow-arc {
-  position: absolute;
-  pointer-events: none;
-  z-index: 1;
-  top: 44%;
-  left: 36%;
-  width: 18%;
-  height: 18%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(180, 220, 255, 0.85) 0%,
-    rgba(74, 158, 255, 0.4) 40%,
-    transparent 72%
-  );
-  filter: blur(25px);
-  opacity: 0.35;
-  animation: weldPulse 4s ease-in-out infinite;
-}
-
-@keyframes weldPulse {
-  0%,
-  100% {
-    opacity: 0.28;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  50% {
-    opacity: 0.42;
-    transform: translate(-50%, -50%) scale(1.06);
-  }
-}
-
 /* Hero typography */
 .hero-title {
   color: #ffffff;
@@ -488,34 +461,10 @@ body {
     0 0 0 1px color-mix(in srgb, var(--theme-accent) 25%, transparent);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .hero-weld-glow-arc {
-    animation: none;
-    opacity: 0.35;
-  }
-}
-
-@media (max-width: 1023px) {
-  .hero-visual {
-    order: 2;
-    margin-inline: auto;
-    width: 100%;
-    max-width: 520px;
-  }
-
-  .hero-content {
-    order: 1;
-  }
-}
-
 @media (max-width: 639px) {
   .hero-inner {
     min-height: auto;
     padding-top: 3.5rem;
-  }
-
-  .hero-welder-stage {
-    width: 100%;
   }
 }
 

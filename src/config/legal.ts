@@ -5,7 +5,7 @@
 import { BRAND } from './brand'
 
 /** Static date — update when policy content changes */
-export const LEGAL_LAST_UPDATED = 'June 8, 2026' as const
+export const LEGAL_LAST_UPDATED = 'October 13, 2026' as const
 
 export const DISCLAIMERS = {
   quote:
@@ -13,7 +13,7 @@ export const DISCLAIMERS = {
   serviceArea:
     'Service availability may vary based on location, project scope, and scheduling.',
   photo:
-    'Placeholder slots are not completed Tip Top work. Real project photos will replace labeled placeholders before launch.',
+    'Project photography, promotional images, and design concepts are labeled in the gallery.',
 } as const
 
 export const PRIVACY_POLICY = {
@@ -32,6 +32,7 @@ export const PRIVACY_POLICY = {
       paragraphs: [
         'Information submitted through our contact or quote request form is used to review your project, respond to your inquiry, prepare preliminary estimates, schedule follow-up communication, and plan fabrication work if you proceed with a project.',
         'We do not sell your personal information. Form data is used for business communication and project-related purposes connected to services offered by Tip Top Welding LLC.',
+        'Netlify hosts our website and processes quote submissions and uploaded project photos. Submission notifications are delivered to our business email address.',
       ],
     },
     {
@@ -44,15 +45,14 @@ export const PRIVACY_POLICY = {
     {
       title: 'Analytics',
       paragraphs: [
-        'We may use website analytics tools in the future to understand how visitors use our site and to improve content and performance.',
-        'TODO: Update this section with the specific analytics provider(s), data collected, and opt-out information once analytics are configured for production.',
+        'The website currently has no third-party advertising or visitor analytics scripts. Our hosting provider may process technical logs to operate and secure the website.',
       ],
     },
     {
       title: 'Cookies',
       paragraphs: [
-        'Our website may use cookies or similar technologies for basic functionality, preferences, or analytics.',
-        'TODO: Update this section with cookie types, purposes, and management options once cookie usage is confirmed for production.',
+        'The website stores your light or dark display preference in your browser’s local storage. You can change that preference using the theme button or remove it by clearing site data in your browser.',
+        'External services you visit through links on this website may use their own cookies or storage under their own privacy policies.',
       ],
     },
     {

@@ -3,10 +3,13 @@
 // =============================================================================
 
 export const GALLERY_CATEGORY_OPTIONS = [
+  'Yacht Railwork',
+  'Architectural Rails & Stairs',
+  'Decorative Gates',
   'Marine Repairs',
   'Bow Rails',
-  'Pool Railings',
-  'Mailboxes',
+  'Pool Rails',
+  'Mailbox Stands',
   'Custom Fabrication',
   'Dock & Marina',
   'Nautical Metal Art',

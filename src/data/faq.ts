@@ -71,14 +71,14 @@ export const FAQ_ITEMS: readonly FaqItem[] = [
     category: 'pricing',
     question: 'How do I get a quote for my project?',
     answer:
-      'Text or email photos of your project with a brief description of what you need. We review the details and provide a preliminary estimate. Final pricing and scope are confirmed after project review and inspection.',
+      'Use our quote form to send project details and up to three photos, or call, text, or email us. We review the details and provide a preliminary estimate. Final pricing and scope are confirmed after project review and inspection.',
   },
   {
     id: 'project-range',
     category: 'pricing',
     question: 'What size projects do you handle?',
     answer:
-      'Project scope varies from repairs and railing work to larger custom fabrication. Every job is quoted individually after photo review and discussion — we do not publish fixed price ranges.',
+      'Project scope varies from repairs and railing work to larger custom fabrication. Services and custom changes are quoted individually. Approved pool rail and mailbox designs have individual prices listed in our store.',
   },
   {
     id: 'timeline',
@@ -106,7 +106,7 @@ export const FAQ_ITEMS: readonly FaqItem[] = [
     category: 'general',
     question: 'Are you licensed and insured?',
     answer:
-      'License and insurance details will be confirmed with the owner before publication on this site. Contact us directly if you need this information for your project.',
+      'Contact us for current license and insurance documentation needed for your property, marina, or project.',
   },
 ] as const
 

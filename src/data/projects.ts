@@ -5,24 +5,7 @@ import { GALLERY_ASSETS, PROJECT_ASSETS } from './images'
 // Project registry — real Tip Top work only; conservative labels and descriptions
 // =============================================================================
 
-export const BEFORE_AFTER_PROJECTS: readonly BeforeAfterProject[] = [
-  {
-    id: 'boat-rail-repair',
-    slug: 'boat-rail-repair',
-    kind: 'before-after',
-    title: 'Boat Rail Repair',
-    category: 'Marine Welding',
-    location: 'Southwest Florida',
-    status: 'published',
-    serviceSlug: 'bow-rail-repairs',
-    problem: 'Damaged bow rail on a boat — repair and fabrication work needed.',
-    solution: 'Boat rail repair and fabrication work by Tip Top Welding LLC.',
-    beforeImage: PROJECT_ASSETS.boatRailBefore,
-    afterImage: PROJECT_ASSETS.boatRailAfter,
-    beforeAlt: 'Boat with damaged bow rail before repair',
-    afterAlt: 'Boat bow rail after repair work',
-  },
-]
+export const BEFORE_AFTER_PROJECTS: readonly BeforeAfterProject[] = []
 
 export const FEATURED_PROJECTS: readonly FeaturedProject[] = [
   {

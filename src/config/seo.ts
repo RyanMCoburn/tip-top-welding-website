@@ -9,12 +9,14 @@ export interface PageMeta {
   noindex?: boolean
 }
 
-const DEFAULT_DESCRIPTION =
-  'Mobile welding and custom fabrication in Southwest Florida. Aluminum and stainless steel welding for boats, bow rails, pontoons, skeg repairs, pool railings, docks, marinas, and custom metal projects.'
+const HOMEPAGE_TITLE = 'Tip Top Welding LLC | Mobile Welding Cape Coral FL'
+
+const HOMEPAGE_DESCRIPTION =
+  'Tip Top Welding LLC provides mobile aluminum and stainless TIG welding in Cape Coral and Southwest Florida, specializing in yacht welding, bow rail repairs, pontoons, skegs, fuel tanks, pool railings, gates, stairs, decorative rails, and custom coastal metal art.'
 
 export const DEFAULT_SEO: PageMeta = {
-  title: `${BRAND.legalName} | Mobile Welding & Custom Fabrication in Southwest Florida`,
-  description: DEFAULT_DESCRIPTION,
+  title: HOMEPAGE_TITLE,
+  description: HOMEPAGE_DESCRIPTION,
   path: '/',
 }
 
@@ -85,7 +87,7 @@ export function getRouteMeta(pathname: string): PageMeta {
   const normalized = pathname.replace(/\/$/, '') || '/'
   return ROUTE_SEO[normalized] ?? {
     title: `Page Not Found | ${BRAND.legalName}`,
-    description: DEFAULT_DESCRIPTION,
+    description: HOMEPAGE_DESCRIPTION,
     path: normalized,
     noindex: true,
   }

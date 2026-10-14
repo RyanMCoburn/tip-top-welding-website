@@ -3,7 +3,7 @@
 // =============================================================================
 
 /** When true, demo banners, placeholder forms, and unverified trust claims are shown */
-export const DEMO_MODE = true as const
+export const DEMO_MODE = false as const
 
 const SMS_PREFILL = 'Hi, I would like a fabrication quote. I can send project photos.'
 
@@ -32,16 +32,16 @@ export const BRAND = {
   domain: 'tiptopwelding.com',
   url: 'https://tiptopwelding.com',
   /** Homepage H1 */
-  tagline: 'Mobile Welding & Custom Fabrication in Southwest Florida',
+  tagline: 'Custom Metalwork for Yachts & Coastal Homes',
   subheadline:
-    'Aluminum and stainless steel welding for boats, bow rails, pontoons, skeg repairs, decorative railings, pool rails, docks, marinas, and custom metal projects.',
+    'Stainless and aluminum fabrication for yacht railwork, custom architectural railings, statement pool rails, and coastal metal art. Detailed repairs and on-site work across Southwest Florida.',
   headerTagline: 'Mobile Welding & Custom Fabrication',
   heroServiceLine:
-    'On-site welding · Aluminum & stainless · Boats, docks & custom metalwork',
+    'Yacht railwork · Architectural fabrication · Custom coastal designs',
   heroTags: [
-    'Mobile Welding & Custom Fabrication',
+    'Custom Fabrication',
     'Aluminum & Stainless Steel',
-    'Marine Welding',
+    'Yacht & Coastal Metalwork',
     'Southwest Florida',
   ] as const,
   themeColor: '#0a0a0a',

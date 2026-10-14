@@ -14,11 +14,10 @@ export const IMAGE_PATHS = {
     default: '/images/logo/logo.png',
   },
   hero: {
-    /** Full professional welder photo — homepage hero only, unprocessed */
-    welderPng: '/images/hero/welder.png',
-    welderWebp: '/images/hero/welder.webp',
+    /** Real marina welding photo — homepage hero background */
+    marinaHero: '/images/hero/tip-top-welding-marina-hero.jpg',
   },
-  ogImage: '/images/logo/logo-dark.png',
+  ogImage: '/images/hero/tip-top-welding-marina-hero.jpg',
   gallery: (filename: string) => `/images/gallery/${filename}`,
   projects: (filename: string) => `/images/projects/${filename}`,
   brand: (filename: string) => `/images/brand/${filename}`,
@@ -78,12 +77,12 @@ export const GALLERY_CATEGORIES: readonly GalleryCategoryAsset[] = [
   },
   {
     id: 'pool-railings',
-    label: 'Pool Railings',
+    label: 'Pool Rails',
     placeholder: true,
   },
   {
     id: 'mailboxes',
-    label: 'Mailboxes',
+    label: 'Mailbox Stands',
     image: GALLERY_ASSETS.customMailboxWork,
     imageAlt: 'Custom mailbox fabrication in Cape Coral',
   },
@@ -137,7 +136,7 @@ export const REAL_WORK_PREVIEW: readonly WorkPreviewItem[] = [
   },
   {
     id: 'pool-railings',
-    title: 'Pool Railings',
+    title: 'Pool Rails',
     category: 'Custom Fabrication',
     placeholder: true,
   },
