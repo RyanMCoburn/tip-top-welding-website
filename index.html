@@ -36,6 +36,12 @@
 
     <meta name="theme-color" content="#0a0a0a" />
     <script>
+      // Identity emails land on the homepage; the editor handles these callbacks.
+      if (/^#(?:invite_token|confirmation_token|recovery_token|email_change_token)=/.test(window.location.hash)) {
+        window.location.replace('/admin/' + window.location.hash);
+      }
+    </script>
+    <script>
       (function () {
         var key = 'ttw-theme';
         var stored = localStorage.getItem(key);
