@@ -1,1 +1,11 @@
-{"enabled":false,"mode":"pending","urls":{}}
+{
+  "enabled": true,
+  "mode": "live",
+  "urls": {
+    "nautilus-pool-rail:stainless": "https://buy.stripe.com/14A9AT1NUbNx6ipamM5Vu01",
+    "dolphin-pool-rail:stainless": "https://buy.stripe.com/6oUfZh64a04PdKR8eE5Vu00",
+    "sea-turtle-pool-rail:stainless": "https://buy.stripe.com/9B600j3W2bNxeOVfH65Vu02",
+    "sea-turtle-mailbox:mill": "https://buy.stripe.com/4gMeVd8ci9FpayFgLa5Vu03",
+    "sea-turtle-mailbox:standard": "https://buy.stripe.com/5kQ14neAGcRBgX31Qg5Vu04"
+  }
+}
