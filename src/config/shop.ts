@@ -6,9 +6,9 @@ export const SHOP = {
     ...['Anchor','Big Horned Owl','Burrowing Owl','Dolphin','Hammerhead Shark','Manatee','Pelican','Seahorse','Shrimp'].map(name=>({id:`${name.toLowerCase().replaceAll(' ','-')}-mailbox`,name,price:null})),
   ] as ShopDesign[] },
   pool: { title:'Custom Pool Rails', image:'/images/gallery/nautilus-pool-rail.webp', material:'Polished stainless steel', designs:[
-    {id:'nautilus-pool-rail',name:'Nautilus',price:3500},
-    {id:'dolphin-pool-rail',name:'Dolphin',price:3650},
-    {id:'sea-turtle-pool-rail',name:'Sea Turtle',price:4650},
+    {id:'nautilus-pool-rail',name:'Nautilus',price:3300},
+    {id:'dolphin-pool-rail',name:'Dolphin',price:3311},
+    {id:'sea-turtle-pool-rail',name:'Sea Turtle',price:4288},
     ...['Captain’s Wheel','Coral','Crab'].map(name=>({id:`${name.toLowerCase().replace(/[^a-z ]/g,'').replaceAll(' ','-')}-pool-rail`,name,price:null})),
   ] as ShopDesign[] },
 }
