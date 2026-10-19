@@ -1,10 +1,12 @@
 import CTAButton from '../components/ctabutton'
 import GalleryPhotoCard from '../components/galleryphotocard'
-import { getGallerySections } from '../content/loaders'
+import BeforeAfterShowcase from '../components/beforeaftershowcase'
+import { getBeforeAfterProjects, getGallerySections } from '../content/loaders'
 import { CTAS, CONTACT, GALLERY_PAGE, SITE } from '../data/sitecontent'
 
 export default function Gallery() {
   const sections = getGallerySections().filter((section) => section.photos.length > 0)
+  const beforeAfterProjects = getBeforeAfterProjects()
 
   return (
     <>
@@ -14,6 +16,16 @@ export default function Gallery() {
             <h1 className="text-4xl font-bold text-white">{GALLERY_PAGE.title}</h1>
             <p className="mx-auto mt-4 max-w-2xl text-steel-400">{GALLERY_PAGE.subtitle}</p>
           </div>
+
+          {beforeAfterProjects.length > 0 && (
+            <section id="before-after" aria-labelledby="before-after-title" className="mb-16 scroll-mt-28">
+              <h2 id="before-after-title" className="text-3xl font-bold text-white">Bow Rail &amp; Pontoon Repairs: Before &amp; After</h2>
+              <p className="mt-3 mb-8 max-w-2xl text-steel-400">Real repair photos from the same jobs. Select a photo to see it full size.</p>
+              <div className="grid gap-8">
+                {beforeAfterProjects.map(project => <BeforeAfterShowcase key={project.id} project={project} />)}
+              </div>
+            </section>
+          )}
 
           <div className="space-y-14">
             {sections.map((section, i) => (

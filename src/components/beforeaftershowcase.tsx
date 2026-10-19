@@ -19,12 +19,15 @@ function ProjectImage({
   }
 
   return (
+    <a href={src} aria-label={`View full image: ${label}`} className="block h-full focus-visible:outline-2 focus-visible:outline-accent">
     <img
       src={src}
       alt={alt}
-      className="gallery-photo-img h-full w-full object-cover"
+      className="gallery-photo-img h-full w-full object-contain"
       loading="lazy"
+      decoding="async"
     />
+    </a>
   )
 }
 

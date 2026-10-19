@@ -56,11 +56,11 @@ export default function Projects() {
       </section>
 
       {beforeAfterProjects.length > 0 && (
-        <section className="section-space bg-navy-950">
+        <section id="before-after" className="section-space scroll-mt-28 bg-navy-950">
           <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
             <SectionHeading
               title="Before & After"
-              subtitle="Real Tip Top work where photos are available — conservative labels, no overstated claims."
+              subtitle="Bow rail restorations and pontoon repairs, photographed before and after the work."
             />
             <div className="grid gap-8">
               {beforeAfterProjects.map((project) => (

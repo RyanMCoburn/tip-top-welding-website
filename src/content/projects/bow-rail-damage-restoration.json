@@ -1,0 +1,9 @@
+{
+  "slug": "bow-rail-damage-restoration",
+  "title": "Bent Bow Rail Restoration",
+  "category": "Bow Rails",
+  "description": "The same bow before and after railing restoration: bent tubing at the dock, then the railing back in position around the bow.",
+  "beforeImage": "/images/before-after/bow-rail-before.webp",
+  "afterImage": "/images/before-after/bow-rail-after.webp",
+  "sortOrder": -30
+}
