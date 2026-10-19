@@ -2,9 +2,9 @@
   "enabled": true,
   "mode": "live",
   "unitAmounts": {
-    "nautilus-pool-rail:stainless": 350000,
-    "dolphin-pool-rail:stainless": 365000,
-    "sea-turtle-pool-rail:stainless": 465000,
+    "nautilus-pool-rail:stainless": 330000,
+    "dolphin-pool-rail:stainless": 330000,
+    "sea-turtle-pool-rail:stainless": 428800,
     "sea-turtle-mailbox:mill": 450000,
     "sea-turtle-mailbox:standard": 475000
   },
