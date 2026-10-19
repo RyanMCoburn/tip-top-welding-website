@@ -16,6 +16,10 @@ export function liveCheckoutUrl(designId:string,finish:string):string|null {
   const key=`${designId}:${finish}`
   const urlText=(links.urls as Record<string,string>)[key]
   if(!links.enabled || links.mode!=='live' || !urlText) return null
+  const design=[...SHOP.mailbox.designs,...SHOP.pool.designs].find(item=>item.id===designId)
+  if(design?.price==null) return null
+  const subtotal=design.price+(designId.endsWith('-mailbox') && finish==='standard'?250:0)
+  if((links.unitAmounts as Record<string,number>)[key]!==Math.round(subtotal*100)) return null
   try { const url=new URL(urlText); return url.protocol==='https:' && url.hostname==='buy.stripe.com' && !url.pathname.startsWith('/test_') ? url.href : null } catch { return null }
 }
 export function shopQuoteUrl(category:string, request:string) { return `/contact?details=${encodeURIComponent(`I'm interested in ${category}. ${request}`)}#quote-form` }
