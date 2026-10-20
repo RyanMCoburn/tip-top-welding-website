@@ -151,7 +151,14 @@ export const WHY_CLIENTS_CALL = [
 
 export const TYPES_OF_WORK = [
   { title: 'Bow Rail Repairs', description: 'Stainless and aluminum bow rail repair, replacement, and railing work for boats.', icon: 'railing' },
-  { title: 'Pontoon & Skeg Repairs', description: 'Structural aluminum pontoon repair and skeg damage repair for outboards and sterndrives.', icon: 'pontoon' },
+  { title: "Pontoon Repairs", description: "Pressure checks, crack and leak welding, dent repairs through access windows, and pontoon drain plugs.", icon: "pontoon" },
+  { title: "Lower Units — Skegs & Cavitation Plates", description: "Weld repair and replacement sections for broken skegs and damaged cavitation plates.", icon: "skeg" },
+  { title: "T-Tops — New Builds & Repairs", description: "Custom aluminum T-top fabrication and repairs for boats, fitted to your console and deck layout.", icon: "marine" },
+  { title: "Custom Rod Holders", description: "Custom boat rod holders and welded rod-holder assemblies, arranged for your fishing setup and available space.", icon: "marine" },
+  { title: "Swim Platform Railings", description: "Custom swim-platform railings and grab rails for boats and yachts, with fabrication, repair, and replacement to fit your vessel.", icon: "railing" },
+  { title: "Aluminum Fuel Tanks", description: "Custom aluminum fuel tanks fabricated to fit your boat and its available tank space.", icon: "fabrication" },
+  { title: "Custom Water Tanks", description: "Custom water-tank fabrication, including stainless steel tanks built around the space available aboard your boat or yacht.", icon: "fabrication" },
+  { title: "Louvers & Privacy Screens", description: "Custom metal louvers, equipment enclosures, and privacy screens for homes and waterfront properties.", icon: "decorative" },
   { title: 'Decorative Rails & Gates', description: 'Custom decorative rails, gates, and stair metalwork for homes and waterfront properties.', icon: 'decorative' },
   { title: 'Pool Railings', description: 'Custom stainless and aluminum pool railing systems built for your deck layout.', icon: 'railing' },
   { title: 'Marina & Dock Hardware', description: 'Ladders, handrails, gates, frames, and custom hardware for docks and marinas.', icon: 'dock' },
@@ -282,7 +289,9 @@ export const HOW_IT_WORKS = [
 
 export const COMMON_PROJECTS = [
   { title: 'Bow Rail Repairs', description: 'Stainless and aluminum bow rail repair and replacement — quoted per vessel after photos and measurements.' },
-  { title: 'Pontoon & Skeg Repairs', description: 'Structural pontoon aluminum repair and skeg damage repair for outboards and sterndrives.' },
+  { title: 'Pontoon Repairs', description: 'Pressure checks, dent repairs, crack welding, and drain plugs.' },
+  { title: 'Lower Unit Repairs', description: 'Skeg rebuilding and cavitation-plate weld repairs.' },
+  { title: 'Custom Boat Fabrication', description: 'New T-tops and repairs, custom rod holders, swim-platform railings, and custom tanks.' },
   { title: 'Pool & Decorative Railings', description: 'Custom pool railings, decorative rails, and gate metalwork for homes and waterfront properties.' },
   { title: 'Custom Mailbox Installations', description: 'Mailbox makeovers and custom metal mailbox projects in aluminum and stainless.' },
   { title: 'Dock & Marina Hardware', description: 'Dock ladders, handrails, gates, and custom hardware for marinas and private slips.' },

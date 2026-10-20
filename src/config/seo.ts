@@ -44,7 +44,7 @@ export const ROUTE_SEO: Record<string, PageMeta> = {
   ),
   '/gallery': page(
     'Project Gallery',
-    'Tip Top Welding project gallery — real photos coming soon. Mobile welding and custom fabrication in Cape Coral and Southwest Florida.',
+    'Tip Top Welding project photos: yacht bow rails, pontoons, skeg and cavitation-plate repairs, T-tops, rod holders, custom tanks, gates, railings, and louvers.',
     '/gallery',
   ),
   '/store': page(

@@ -3,8 +3,8 @@ export const SERVICE_REDIRECTS: Record<string, string> = {
   'marine-aluminum-welding': 'aluminum-welding',
   'boat-railings': 'bow-rail-repairs',
   'custom-boat-fabrication': 'custom-metal-projects',
-  't-tops-towers': 'custom-metal-projects',
-  'swim-platforms': 'marine-welding',
+  't-tops-towers': 't-top-fabrication-repairs',
+  'swim-platforms': 'swim-platform-railings',
   'skeg-lower-unit-repairs': 'skeg-repairs',
 }
 

@@ -11,6 +11,12 @@ import {
   SPECIALIST_REASONS,
 } from '../data/sitecontent'
 
+const SERVICE_GROUPS = [
+  { id: 'marine-services', title: 'Marine Work', ids: ['bow-rail-repairs', 'pontoon-repairs', 'skeg-repairs', 't-top-fabrication-repairs', 'custom-rod-holders', 'swim-platform-railings', 'fuel-tanks', 'water-tanks', 'marine-welding', 'dock-marina'] },
+  { id: 'property-custom-services', title: 'Railings, Gates & Custom Fabrication', ids: ['decorative-rails', 'custom-gates', 'pool-railings', 'louvers-privacy-screens', 'custom-metal', 'nautical-metal-art'] },
+  { id: 'welding-services', title: 'Welding & Mobile Service', ids: ['mobile-welding', 'aluminum-welding', 'stainless-steel'] },
+] as const
+
 export default function Services() {
   return (
     <>
@@ -49,7 +55,10 @@ export default function Services() {
 
       <section className="bg-navy-950">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
-          {SERVICES.map((service, index) => (
+          {SERVICE_GROUPS.map((group) => (
+            <section key={group.id} id={group.id} className="scroll-mt-28 pt-12">
+              <h2 className="border-b border-accent/40 pb-5 text-3xl font-bold text-white md:text-4xl">{group.title}</h2>
+              {group.ids.map((id) => SERVICES.find((service) => service.id === id)).filter((service) => service !== undefined).map((service, index) => (
             <ServiceDetail
               key={service.id}
               id={service.id}
@@ -59,6 +68,8 @@ export default function Services() {
               commonUseCases={service.commonUseCases}
               reversed={index % 2 === 1}
             />
+              ))}
+            </section>
           ))}
         </div>
       </section>
