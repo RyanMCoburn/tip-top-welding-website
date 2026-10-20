@@ -60,7 +60,7 @@ export default function Projects() {
           <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
             <SectionHeading
               title="Before & After"
-              subtitle="A missing forward bow rail and a pontoon crack, shown before and after the work."
+              subtitle="Bow-rail installation, pontoon welding and outboard skeg replacement, shown before and after the work."
             />
             <div className="grid gap-8">
               {beforeAfterProjects.map((project) => (

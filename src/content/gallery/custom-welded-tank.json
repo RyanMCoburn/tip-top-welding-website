@@ -1,10 +1,10 @@
 {
   "id": "custom-welded-tank",
   "slug": "custom-welded-tank",
-  "title": "Custom Welded Tank",
-  "category": "Custom Fabrication",
+  "title": "Custom Aluminum Fuel Tank",
+  "category": "Fuel Tanks",
   "image": "/images/portfolio/custom-welded-tank.webp",
   "alt": "Fabricated metal tank in the workshop",
-  "description": "Project photo • custom welded metal tank in the workshop.",
+  "description": "Project photo • custom aluminum fuel tank with welded seams, sender opening and pipe connections.",
   "sortOrder": -17
 }
