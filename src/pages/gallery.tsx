@@ -19,7 +19,7 @@ export default function Gallery() {
 
           {beforeAfterProjects.length > 0 && (
             <section id="before-after" aria-labelledby="before-after-title" className="mb-16 scroll-mt-28">
-              <h2 id="before-after-title" className="text-3xl font-bold text-white">Bow Rail &amp; Pontoon Repairs: Before &amp; After</h2>
+              <h2 id="before-after-title" className="text-3xl font-bold text-white">Bow Rails &amp; Pontoon Repairs: Before &amp; After</h2>
               <p className="mt-3 mb-8 max-w-2xl text-steel-400">Real repair photos from the same jobs. Select a photo to see it full size.</p>
               <div className="grid gap-8">
                 {beforeAfterProjects.map(project => <BeforeAfterShowcase key={project.id} project={project} />)}

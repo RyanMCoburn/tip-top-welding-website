@@ -1,9 +1,9 @@
 {
   "slug": "bow-rail-refit",
-  "title": "Bow Railing Refit",
+  "title": "Missing Bow Rail to Completed Installation",
   "category": "Bow Rails",
-  "description": "A bow railing photographed during the refit and afterward, with the rail upright around the wood-trimmed bow. Both photos show the same boat at the workshop.",
-  "beforeImage": "/images/before-after/bow-rail-refit-before.webp",
-  "afterImage": "/images/before-after/bow-rail-refit-after.webp",
+  "description": "Before: the forward bow has no railing. After: the completed rail follows the wood-trimmed bow. These photos show the same deck hatch, cleats and bow light.",
+  "beforeImage": "/images/before-after/bow-no-forward-rail.webp",
+  "afterImage": "/images/before-after/bow-forward-rail-completed.webp",
   "sortOrder": -29
 }
