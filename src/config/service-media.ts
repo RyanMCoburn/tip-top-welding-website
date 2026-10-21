@@ -105,15 +105,12 @@ export const SERVICE_MEDIA:Record<string,ServiceMedia> = {
     ]
   },
   "custom-gates": {
-    "src": "/images/services/decorative-gate.webp",
-    "alt": "Installed arched metal gate with detailed scrollwork",
-    "caption": "Custom scrollwork gate • installed",
+    "src": "/images/portfolio/naples-brushed-stainless-gate.webp",
+    "alt": "Installed brushed stainless steel double gate with pale inset panels in Naples",
+    "caption": "Brushed stainless steel gate • Naples",
     "additional": [
-      {
-        "src": "/images/portfolio/dolphin-garden-gate.webp",
-        "alt": "Installed garden gate with a dolphin design",
-        "caption": "Dolphin garden gate • installed"
-      }
+      {"src":"/images/services/decorative-gate.webp","alt":"Installed arched metal gate with detailed scrollwork","caption":"Custom scrollwork gate • installed"},
+      {"src":"/images/portfolio/dolphin-garden-gate.webp","alt":"Installed garden gate with a dolphin design","caption":"Dolphin garden gate • installed"}
     ]
   },
   "pool-railings": {
