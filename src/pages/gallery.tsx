@@ -1,3 +1,4 @@
+import PoolProjectShowcase from '../components/poolprojectshowcase'
 import CTAButton from '../components/ctabutton'
 import GalleryPhotoCard from '../components/galleryphotocard'
 import BeforeAfterShowcase from '../components/beforeaftershowcase'
@@ -6,12 +7,13 @@ import { getBeforeAfterProjects, getGallerySections, getHomeFeaturedWork } from 
 import { CTAS, CONTACT, GALLERY_PAGE, SITE } from '../data/sitecontent'
 
 export default function Gallery() {
-  const sections = getGallerySections().filter((section) => section.photos.length > 0)
+  const sections = getGallerySections().filter((section) => section.photos.length > 0).sort((a,b) => (['Pool Rails','Mailbox Stands'].includes(a.label)?0:1) - (['Pool Rails','Mailbox Stands'].includes(b.label)?0:1))
   const beforeAfterProjects = getBeforeAfterProjects()
   const selectedWork = getHomeFeaturedWork()
 
   return (
     <>
+      <PoolProjectShowcase />
       <section className="section-space bg-navy-900">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <div className="mb-14 text-center">
@@ -19,7 +21,7 @@ export default function Gallery() {
             <p className="mx-auto mt-4 max-w-2xl text-steel-400">{GALLERY_PAGE.subtitle}</p>
           </div>
 
-          <section aria-labelledby="selected-work-title" className="mb-16">
+          <div className="mb-10 flex flex-wrap justify-center gap-4"><CTAButton to="/shop#pool">Shop Pool Rail Designs</CTAButton><CTAButton to="/shop#mailbox" variant="outline">Shop Mailbox Designs</CTAButton></div><section aria-labelledby="selected-work-title" className="mb-16">
             <h2 id="selected-work-title" className="mb-6 text-3xl font-bold text-white">Selected Yacht &amp; Architectural Work</h2>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {selectedWork.map(item => <WorkPreviewCard key={item.id} {...item} />)}
@@ -99,3 +101,5 @@ export default function Gallery() {
     </>
   )
 }
+
+

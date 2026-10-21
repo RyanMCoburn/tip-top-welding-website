@@ -1,11 +1,17 @@
 import { useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import CTAButton from './ctabutton'
 import { SHOP, liveCheckoutUrl, shopQuoteUrl } from '../config/shop'
 import { formatStorePrice } from '../config/store'
 export default function ShopCard({category}:{category:'mailbox'|'pool'}) {
   const item=SHOP[category]
-  const [designId,setDesignId]=useState(item.designs[0].id)
+  const [params,setParams]=useSearchParams()
+  const designId=params.get(category) ?? item.designs[0].id
+  const setDesignId=(value:string)=>setParams(previous=>{const next=new URLSearchParams(previous);next.set(category,value);return next},{replace:true,preventScrollReset:true})
   const design=item.designs.find(option=>option.id===designId) ?? item.designs[0]
+  const imageSlug=design.id.endsWith('-mailbox')?`${design.id}-stand`:design.id
+  const availableImages=new Set(['sea-turtle-mailbox-stand','anchor-mailbox-stand','big-horned-owl-mailbox-stand','hammerhead-shark-mailbox-stand','manatee-mailbox-stand','pelican-mailbox-stand','seahorse-mailbox-stand','shrimp-mailbox-stand','nautilus-pool-rail','dolphin-pool-rail','sea-turtle-pool-rail','captains-wheel-pool-rail','coral-pool-rail','crab-pool-rail'])
+  const designImage=availableImages.has(imageSlug)?`/images/gallery/${imageSlug}.webp`:undefined
   const [finish,setFinish]=useState('mill')
   const [material,setMaterial]=useState('stainless')
   const mailbox=category==='mailbox'
@@ -17,8 +23,8 @@ export default function ShopCard({category}:{category:'mailbox'|'pool'}) {
   const input='mt-2 w-full rounded-lg border border-navy-700 bg-navy-950 px-4 py-3 text-white focus:outline-2 focus:outline-accent'
   return <article id={category} className="card-premium flex flex-col overflow-hidden rounded-2xl scroll-mt-24">
     <div className="grid sm:grid-cols-[0.8fr_1fr]">
-      <img src={item.image} alt={`${item.title} — promotional example`} className="h-full max-h-[32rem] w-full bg-navy-950 object-contain" loading="lazy"/>
-      <div className="p-6 md:p-8"><p className="text-xs font-semibold uppercase tracking-wider text-accent">Made to order in Cape Coral</p><h2 className="mt-3 text-3xl font-bold text-white">{item.title}</h2><p className="mt-4 font-semibold text-white">{design.name}</p><p className="mt-2 text-4xl font-bold text-white">{design.price===null?'Request a quote':formatStorePrice(design.price)}</p><p className="mt-3 text-steel-300">{item.material}. Each design is priced individually.</p><p className="mt-3 text-xs text-steel-400">Image shows a {mailbox?'Sea Turtle mailbox stand':'Nautilus pool rail'} promotional example.</p></div>
+      {designImage?<img src={designImage} alt={`${design.name} ${item.title} — design promotional image`} className="h-full max-h-[32rem] w-full bg-navy-950 object-contain" loading="lazy"/>:<div className="flex items-center justify-center p-8 text-steel-300">Ask us about photos and options for this custom design.</div>}
+      <div className="p-6 md:p-8"><p className="text-xs font-semibold uppercase tracking-wider text-accent">Made to order in Cape Coral</p><h2 className="mt-3 text-3xl font-bold text-white">{item.title}</h2><p className="mt-4 font-semibold text-white">{design.name}</p><p className="mt-2 text-4xl font-bold text-white">{design.price===null?'Request a quote':formatStorePrice(design.price)}</p><p className="mt-3 text-steel-300">{item.material}. Each design is priced individually.</p>{designImage?<p className="mt-3 text-xs text-steel-400">{design.name} design / promotional image.</p>:null}</div>
     </div>
     <div className="flex flex-1 flex-col border-t border-navy-700 p-6 md:p-8">
       <label className="mb-5 font-medium text-steel-300">Design<select value={design.id} onChange={e=>setDesignId(e.target.value)} className={input}>{item.designs.map(option=><option key={option.id} value={option.id}>{option.name} — {option.price===null?'request a quote':formatStorePrice(option.price)}</option>)}</select></label>

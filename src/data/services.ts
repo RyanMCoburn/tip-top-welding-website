@@ -187,7 +187,8 @@ export const SERVICES: readonly Service[] = [
     commonUseCases: [
       'Decorative entry and porch rails',
       'Custom gates and gate frames',
-      'Stair rails and handrails',
+      'Straight and curved stair railings',
+        'Decorative landing rails and handrails',
       'Waterfront property metalwork',
     ],
     filterTags: ['decorative', 'stainless', 'aluminum'],
@@ -322,12 +323,12 @@ export const SERVICES: readonly Service[] = [
   {
     id: "swim-platform-railings",
     slug: "swim-platform-railings",
-    title: "Swim Platform Railings",
-    description: "Custom swim-platform railings and grab rails for boats and yachts, with fabrication, repair, and replacement to fit your vessel.",
+    title: "Swim Platform Railings & Davits",
+    description: "Custom swim-platform railings, removable stainless stern rails, grab rails, and davit fabrication or repair for boats and yachts.",
     icon: "railing",
-    commonUseCases: ["New swim-platform railings","Damaged rail repair and replacement","Custom grab rails","Stainless and aluminum rail fabrication"],
+    commonUseCases: ["Stainless swim-platform and stern railings","Removable rails and mounting arrangements","Davit fabrication and repair","Custom grab rails and damaged rail replacement"],
     filterTags: ['aluminum', 'stainless', 'marine'],
-    seo: seo("Swim Platform Railings Southwest Florida", "Custom swim-platform railings and grab rails for boats and yachts, with fabrication, repair, and replacement to fit your vessel.", ["Swim Platform Railings Cape Coral","Swim Platform Railings Southwest Florida"]),
+    seo: seo("Swim Platform Railings Southwest Florida", "Custom swim-platform railings, removable stainless stern rails, grab rails, and davit fabrication or repair for boats and yachts.", ["Swim Platform Railings Cape Coral","Swim Platform Railings Southwest Florida"]),
     seoContent: ["Send photos of the swim platform, mounting points, and the railing you want repaired or replaced. We review measurements and access before quoting."],
   },
   {

@@ -155,7 +155,7 @@ export const TYPES_OF_WORK = [
   { title: "Lower Units — Skegs & Cavitation Plates", description: "Weld repair and replacement sections for broken skegs and damaged cavitation plates.", icon: "skeg" },
   { title: "T-Tops — New Builds & Repairs", description: "Custom aluminum T-top fabrication and repairs for boats, fitted to your console and deck layout.", icon: "marine" },
   { title: "Custom Rod Holders", description: "Custom boat rod holders and welded rod-holder assemblies, arranged for your fishing setup and available space.", icon: "marine" },
-  { title: "Swim Platform Railings", description: "Custom swim-platform railings and grab rails for boats and yachts, with fabrication, repair, and replacement to fit your vessel.", icon: "railing" },
+  { title: "Swim Platform Railings & Davits", description: "Custom stainless swim-platform and removable stern rails, grab rails, and davit fabrication or repair for boats and yachts.", icon: "railing" },
   { title: "Aluminum Fuel Tanks", description: "Custom aluminum fuel tanks fabricated to fit your boat and its available tank space.", icon: "fabrication" },
   { title: "Custom Water Tanks", description: "Custom water-tank fabrication, including stainless steel tanks built around the space available aboard your boat or yacht.", icon: "fabrication" },
   { title: "Louvers & Privacy Screens", description: "Custom metal louvers, equipment enclosures, and privacy screens for homes and waterfront properties.", icon: "decorative" },

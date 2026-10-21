@@ -1,3 +1,5 @@
+import PoolProjectShowcase from '../components/poolprojectshowcase'
+import DesignCollection from '../components/designcollection'
 import CTAButton from '../components/ctabutton'
 import HeroBanner from '../components/herobanner'
 import CapabilityStrip from '../components/capabilitystrip'
@@ -27,6 +29,8 @@ export default function Home() {
       <HeroBanner />
 
       <CapabilityStrip />
+      <DesignCollection compact />
+      <PoolProjectShowcase />
 
       {/* Recent real work / types of work */}
       <section id="selected-work" className="section-space scroll-mt-28 bg-navy-950">
@@ -127,3 +131,5 @@ export default function Home() {
     </>
   )
 }
+
+

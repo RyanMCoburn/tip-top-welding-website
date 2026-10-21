@@ -18,15 +18,10 @@ export const SERVICE_MEDIA:Record<string,ServiceMedia> = {
     "caption": "Pontoon patch repair • weld detail"
   },
   "skeg-repairs": {
-    "src": "/images/repairs/cavitation-plate-restored-may2026.webp",
-    "alt": "Cavitation plate after a replacement edge was welded and shaped",
-    "caption": "Cavitation-plate repair • shaped aluminum before repainting",
-    "additional": [
-      {
-        "src": "/images/portfolio/lower-unit-skeg-rebuilt-2026.webp",
-        "alt": "Detached lower unit with a welded and shaped skeg section",
-        "caption": "Skeg repair detail • shaped aluminum before final finishing"
-      }
+    "src":"/images/portfolio/mercury-racing-400r-skeg-repair.webp","alt":"Mercury Racing 400R outboard shown in full with a bare aluminum repair area on the skeg","caption":"Mercury Racing 400R • skeg repair before refinishing",
+    "additional":[
+      {"src":"/images/repairs/cavitation-plate-restored-may2026.webp","alt":"Cavitation plate with a rebuilt and shaped aluminum edge","caption":"Cavitation plate • rebuilt edge before paint"},
+      {"src":"/images/portfolio/lower-unit-skeg-rebuilt-2026.webp","alt":"Detached lower unit with welded and shaped replacement skeg section","caption":"Skeg repair • weld and shaping detail"}
     ]
   },
   "t-top-fabrication-repairs": {
@@ -55,8 +50,8 @@ export const SERVICE_MEDIA:Record<string,ServiceMedia> = {
   },
   "swim-platform-railings": {
     "src": "/images/portfolio/swim-platform-railing-installation.webp",
-    "alt": "Custom rail assembly being fitted on a yacht swim platform",
-    "caption": "Swim-platform rail assembly • during fitting"
+    "alt": "Davit assembly being fitted on a yacht swim platform",
+    "caption": "Swim-platform davit assembly • during fitting"
   },
   "fuel-tanks": {
     "src": "/images/portfolio/custom-welded-tank.webp",
@@ -92,6 +87,7 @@ export const SERVICE_MEDIA:Record<string,ServiceMedia> = {
     "alt": "Custom geometric railing panels fitted to an interior staircase",
     "caption": "Geometric stair railings • installed",
     "additional": [
+      {"src":"/images/portfolio/curved-staircase-overview.webp","alt":"Finished curved staircase and decorative landing railings","caption":"Curved staircase and landing • finished installation"},
       {
         "src": "/images/portfolio/horizontal-entry-railings.webp",
         "alt": "Installed horizontal entrance and walkway railings",
@@ -114,9 +110,13 @@ export const SERVICE_MEDIA:Record<string,ServiceMedia> = {
     ]
   },
   "pool-railings": {
-    "src": "/images/portfolio/sea-turtle-pool-rail-project.webp",
-    "alt": "Polished Sea Turtle-shaped pool rail shown on a temporary display base",
-    "caption": "Sea Turtle pool rail • completed metalwork on a display base"
+    "src":"/images/portfolio/dolphin-poolside-project.webp",
+    "alt":"Polished Dolphin pool rail beside a residential pool on a display base",
+    "caption":"Dolphin pool rail • poolside display",
+    "additional":[
+      {"src":"/images/portfolio/nautilus-poolside-project.webp","alt":"Nautilus rail shown beside a pool on a display base","caption":"Nautilus • poolside display"},
+      {"src":"/images/portfolio/sea-turtle-poolside-project.webp","alt":"Sea Turtle rail during a test fit in a stone-edge pool on a temporary base","caption":"Sea Turtle • poolside test fit"}
+    ]
   },
   "louvers-privacy-screens": {
     "src": "/images/portfolio/horizontal-privacy-screens.webp",
