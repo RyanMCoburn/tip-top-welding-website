@@ -9,6 +9,8 @@ interface GalleryPhotoCardProps {
   placeholder?: boolean
   className?: string
   fullImageLink?: boolean
+  landscape?: boolean
+  hideCaption?: boolean
 }
 
 export default function GalleryPhotoCard({
@@ -19,6 +21,8 @@ export default function GalleryPhotoCard({
   placeholder = false,
   className = '',
   fullImageLink = false,
+  landscape = false,
+  hideCaption = false,
 }: GalleryPhotoCardProps) {
   const [failedSrc, setFailedSrc] = useState<string>()
   if (placeholder || !src || failedSrc === src) {
@@ -33,7 +37,7 @@ export default function GalleryPhotoCard({
           decoding="async"
           onError={() => setFailedSrc(src)}
         />
-  const frameClass = `gallery-photo-frame block ${fullImageLink ? 'aspect-[4/3]' : 'aspect-[3/4]'} overflow-hidden rounded-xl bg-navy-950 focus-visible:outline-2 focus-visible:outline-accent`
+  const frameClass = `gallery-photo-frame block ${fullImageLink || landscape ? 'aspect-[4/3]' : 'aspect-[3/4]'} overflow-hidden rounded-xl bg-navy-950 focus-visible:outline-2 focus-visible:outline-accent`
   return (
     <figure className={`gallery-photo-card group ${className}`}>
       {fullImageLink ? (
@@ -41,7 +45,7 @@ export default function GalleryPhotoCard({
       ) : (
         <div className={frameClass}>{image}</div>
       )}
-      {(caption || label) && (
+      {!hideCaption && (caption || label) && (
         <figcaption className="mt-3 text-sm text-steel-300">
           <span className="block font-semibold">{label}</span>
           {caption && caption !== label ? <span className="mt-1 block text-steel-400">{caption}</span> : null}

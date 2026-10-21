@@ -21,6 +21,8 @@ export default function WorkPreviewCard({
   const card = (
     <article className="card-premium overflow-hidden rounded-xl">
       <GalleryPhotoCard
+        landscape
+        hideCaption
         src={image}
         alt={imageAlt}
         label={title}

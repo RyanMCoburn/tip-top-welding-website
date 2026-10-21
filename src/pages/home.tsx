@@ -17,7 +17,7 @@ import {
 } from '../data/sitecontent'
 
 export default function Home() {
-  const featuredServiceIds = ['marine-welding','stainless-steel','decorative-rails','pool-railings','nautical-metal-art','custom-metal']
+  const featuredServiceIds = ['bow-rail-repairs','marine-welding','stainless-steel','decorative-rails','custom-gates','pool-railings']
   const featuredServices = featuredServiceIds.flatMap(id=>SERVICES.filter(service=>service.id===id))
   const featuredWork = getHomeFeaturedWork().slice(0,6)
   const stagger = ['animate-in-delay-1', 'animate-in-delay-2', 'animate-in-delay-3', 'animate-in-delay-4', 'animate-in-delay-5', 'animate-in-delay-6'] as const
@@ -27,6 +27,31 @@ export default function Home() {
       <HeroBanner />
 
       <CapabilityStrip />
+
+      {/* Recent real work / types of work */}
+      <section id="selected-work" className="section-space scroll-mt-28 bg-navy-950">
+        <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
+          <SectionHeading
+            title={HOMEPAGE.realWorkPreview.title}
+            subtitle={HOMEPAGE.realWorkPreview.subtitle}
+          />
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {featuredWork.map((item, i) => (
+              <div key={item.id} className={`animate-in ${stagger[i % stagger.length]}`}>
+                <WorkPreviewCard {...item} />
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <CTAButton to="/projects" variant="outline">
+              {CTAS.viewProjects}
+            </CTAButton>
+            <CTAButton to="/gallery" variant="ghost">
+              {CTAS.viewGallery}
+            </CTAButton>
+          </div>
+        </div>
+      </section>
 
       {/* Services preview */}
       <section className="section-space bg-navy-900">
@@ -51,31 +76,6 @@ export default function Home() {
           <div className="mt-10 text-center">
             <CTAButton to="/services" variant="outline">
               {CTAS.viewServices}
-            </CTAButton>
-          </div>
-        </div>
-      </section>
-
-      {/* Recent real work / types of work */}
-      <section className="section-space bg-navy-950">
-        <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
-          <SectionHeading
-            title={HOMEPAGE.realWorkPreview.title}
-            subtitle={HOMEPAGE.realWorkPreview.subtitle}
-          />
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {featuredWork.map((item, i) => (
-              <div key={item.id} className={`animate-in ${stagger[i % stagger.length]}`}>
-                <WorkPreviewCard {...item} />
-              </div>
-            ))}
-          </div>
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <CTAButton to="/projects" variant="outline">
-              {CTAS.viewProjects}
-            </CTAButton>
-            <CTAButton to="/gallery" variant="ghost">
-              {CTAS.viewGallery}
             </CTAButton>
           </div>
         </div>

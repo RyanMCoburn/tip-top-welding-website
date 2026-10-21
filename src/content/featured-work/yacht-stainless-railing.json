@@ -1,10 +1,10 @@
 {
-  "image": "/images/portfolio/yacht-stainless-railing.webp",
-  "link": "/gallery#yacht-railwork",
-  "alt": "Yacht Stainless Railwork — project photograph",
-  "sortOrder": -30,
-  "title": "Yacht Stainless Railwork",
+  "slug": "yacht-stainless-railing",
+  "title": "Azimut Yacht — Stainless Railwork",
   "category": "Yacht Railwork",
-  "description": "Project photo • upper-deck railwork on a yacht.",
-  "id": "yacht-stainless-railing"
+  "image": "/images/portfolio/azimut-flybridge-finished-railwork.webp",
+  "alt": "Finished yacht flybridge with teak decking and custom stainless perimeter railings",
+  "description": "Project photograph • Finished yacht flybridge with teak decking and custom stainless perimeter railings.",
+  "link": "/gallery#yacht-railwork",
+  "sortOrder": -100
 }

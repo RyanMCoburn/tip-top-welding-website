@@ -54,7 +54,7 @@ import { BRAND, CONTACT, CTAS } from '../config/brand'
 
 export const HOMEPAGE = {
   servicesPreview: {
-    title: 'Our Services',
+    title: 'Custom Fabrication for Yachts & Coastal Properties',
     subtitle:
       'Yacht railwork, stainless fabrication, architectural railings, custom pool rails, and coastal metal art.',
   },
@@ -64,9 +64,9 @@ export const HOMEPAGE = {
       'Real project photos coming soon. These cards describe work we handle — not completed Tip Top projects until photos are added.',
   },
   realWorkPreview: {
-    title: 'Selected Work & Coastal Designs',
+    title: 'Selected Yacht & Architectural Work',
     subtitle:
-      'Yacht railwork and architectural fabrication alongside custom coastal designs. Project photography, promotional artwork, and concepts are labeled in the gallery.',
+      'Finished stainless yacht railings and custom architectural metalwork, photographed aboard and on site.',
   },
   knownWorkTypes: {
     title: 'Known Work Types',
@@ -125,7 +125,7 @@ export const WHY_CLIENTS_CALL = [
   {
     title: 'Marine Experience',
     icon: 'marine',
-    description: 'Boat rails, pontoon work, skeg repairs, dock hardware, and marine welding. Every job gets quoted after we see photos and talk through the work.',
+    description: 'Custom yacht railings and marine fabrication, planned around the vessel, mounting details, and finish. Send photos and project requirements to discuss the work.',
   },
   {
     title: 'Aluminum & Stainless Specialists',
@@ -170,7 +170,7 @@ export const TYPES_OF_WORK = [
 export const GALLERY_PAGE = {
   title: 'Project Gallery',
   subtitle:
-    'Explore yacht railwork, architectural railings, decorative gates, and custom coastal designs. Project photos and design concepts are labeled. Select any image to view it full size.',
+    'Explore selected yacht railwork and architectural metalwork, followed by project and repair details. Select any image to view it full size.',
 } as const
 
 export const NAUTICAL_METAL_ART = {

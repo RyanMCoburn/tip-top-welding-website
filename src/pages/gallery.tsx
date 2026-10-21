@@ -1,12 +1,14 @@
 import CTAButton from '../components/ctabutton'
 import GalleryPhotoCard from '../components/galleryphotocard'
 import BeforeAfterShowcase from '../components/beforeaftershowcase'
-import { getBeforeAfterProjects, getGallerySections } from '../content/loaders'
+import WorkPreviewCard from '../components/workpreviewcard'
+import { getBeforeAfterProjects, getGallerySections, getHomeFeaturedWork } from '../content/loaders'
 import { CTAS, CONTACT, GALLERY_PAGE, SITE } from '../data/sitecontent'
 
 export default function Gallery() {
   const sections = getGallerySections().filter((section) => section.photos.length > 0)
   const beforeAfterProjects = getBeforeAfterProjects()
+  const selectedWork = getHomeFeaturedWork()
 
   return (
     <>
@@ -16,6 +18,13 @@ export default function Gallery() {
             <h1 className="text-4xl font-bold text-white">{GALLERY_PAGE.title}</h1>
             <p className="mx-auto mt-4 max-w-2xl text-steel-400">{GALLERY_PAGE.subtitle}</p>
           </div>
+
+          <section aria-labelledby="selected-work-title" className="mb-16">
+            <h2 id="selected-work-title" className="mb-6 text-3xl font-bold text-white">Selected Yacht &amp; Architectural Work</h2>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {selectedWork.map(item => <WorkPreviewCard key={item.id} {...item} />)}
+            </div>
+          </section>
 
           <nav aria-label="Browse project categories" className="mb-12 flex flex-wrap justify-center gap-2">
             {sections.map(section => <a key={section.id} href={`#${section.id}`} className="rounded-full border border-navy-700 px-4 py-2 text-sm text-steel-300 hover:border-accent hover:text-white focus-visible:outline-2 focus-visible:outline-accent">{section.label}</a>)}

@@ -34,7 +34,7 @@ export const BRAND = {
   /** Homepage H1 */
   tagline: 'Custom Metalwork for Yachts & Coastal Homes',
   subheadline:
-    'Stainless and aluminum fabrication for yacht railwork, custom architectural railings, statement pool rails, and coastal metal art. Detailed repairs and on-site work across Southwest Florida.',
+    'Custom stainless and aluminum work for luxury yachts and coastal homes. Yacht railings, architectural metalwork, and distinctive commissions, with attention to fit, line, and finish.',
   headerTagline: 'Mobile Welding & Custom Fabrication',
   heroServiceLine:
     'Yacht railwork · Architectural fabrication · Custom coastal designs',
