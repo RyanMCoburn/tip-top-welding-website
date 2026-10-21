@@ -21,7 +21,7 @@ export default function Gallery() {
             <p className="mx-auto mt-4 max-w-2xl text-steel-400">{GALLERY_PAGE.subtitle}</p>
           </div>
 
-          <div className="mb-10 flex flex-wrap justify-center gap-4"><CTAButton to="/shop#pool">Shop Pool Rail Designs</CTAButton><CTAButton to="/shop#mailbox" variant="outline">Shop Mailbox Designs</CTAButton></div><section aria-labelledby="selected-work-title" className="mb-16">
+          <div className="mb-10 flex flex-wrap justify-center gap-4"><CTAButton to="/store#pool">Shop Pool Rail Designs</CTAButton><CTAButton to="/store#mailbox" variant="outline">Shop Mailbox Designs</CTAButton></div><section aria-labelledby="selected-work-title" className="mb-16">
             <h2 id="selected-work-title" className="mb-6 text-3xl font-bold text-white">Selected Yacht &amp; Architectural Work</h2>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {selectedWork.map(item => <WorkPreviewCard key={item.id} {...item} />)}
@@ -101,5 +101,6 @@ export default function Gallery() {
     </>
   )
 }
+
 
 

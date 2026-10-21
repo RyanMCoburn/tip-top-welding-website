@@ -40,7 +40,7 @@ export default function HeroBanner() {
               {SITE.heroServiceLine}
             </p>
             <div className="hero-cta-row animate-in animate-in-delay-6 mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <CTAButton to="/shop" size="lg" className="hero-cta w-full sm:w-auto">Shop Pool Rails &amp; Mailboxes</CTAButton>
+              <CTAButton to="/store" size="lg" className="hero-cta w-full sm:w-auto">Shop Pool Rails &amp; Mailboxes</CTAButton>
               <CTAButton href={CONTACT.tel} size="lg" className="hero-cta w-full sm:w-auto">
                 {CTAS.phone}
               </CTAButton>
@@ -57,4 +57,5 @@ export default function HeroBanner() {
     </section>
   )
 }
+
 
