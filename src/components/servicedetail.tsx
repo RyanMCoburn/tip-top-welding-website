@@ -21,8 +21,8 @@ export default function ServiceDetail({
   reversed = false,
 }: ServiceDetailProps) {
   const media=SERVICE_MEDIA[id]
-  const [failed,setFailed]=useState(false)
-  const hasMedia=Boolean(media) && !failed
+  const [failedSrc,setFailedSrc]=useState<string>()
+  const hasMedia=Boolean(media) && failedSrc !== media?.src
   return (
     <article
       id={id}
@@ -33,7 +33,7 @@ export default function ServiceDetail({
           hasMedia && reversed ? 'lg:[&>*:first-child]:order-2' : ''
         }`}
       >
-        {hasMedia && <div><figure className="overflow-hidden rounded-xl border border-navy-700 bg-navy-900"><a href={media.src} target="_blank" rel="noopener noreferrer" aria-label={`Open photo: ${media.alt}`}><img src={media.src} alt={media.alt} loading="lazy" onError={()=>setFailed(true)} className="aspect-[4/3] w-full object-contain"/></a><figcaption className="border-t border-navy-700 px-4 py-3 text-xs text-steel-400">{media.caption}</figcaption></figure>{media.additional && <div className="mt-3 grid grid-cols-2 gap-3">{media.additional.map(photo=><figure key={photo.src} className="overflow-hidden rounded-lg border border-navy-700 bg-navy-900"><a href={photo.src} target="_blank" rel="noopener noreferrer" aria-label={`Open photo: ${photo.alt}`}><img src={photo.src} alt={photo.alt} loading="lazy" className="aspect-[4/3] w-full object-contain"/></a><figcaption className="px-3 py-2 text-xs text-steel-400">{photo.caption}</figcaption></figure>)}</div>}</div>}
+        {hasMedia && <div><figure className="overflow-hidden rounded-xl border border-navy-700 bg-navy-900"><a href={media.src} target="_blank" rel="noopener noreferrer" aria-label={`Open photo: ${media.alt}`}><img src={media.src} alt={media.alt} loading="lazy" onError={()=>setFailedSrc(media.src)} className="aspect-[4/3] w-full object-contain"/></a><figcaption className="border-t border-navy-700 px-4 py-3 text-xs text-steel-400">{media.caption}</figcaption></figure>{media.additional && <div className="mt-3 grid grid-cols-2 gap-3">{media.additional.map(photo=><figure key={photo.src} className="overflow-hidden rounded-lg border border-navy-700 bg-navy-900"><a href={photo.src} target="_blank" rel="noopener noreferrer" aria-label={`Open photo: ${photo.alt}`}><img src={photo.src} alt={photo.alt} loading="lazy" className="aspect-[4/3] w-full object-contain"/></a><figcaption className="px-3 py-2 text-xs text-steel-400">{photo.caption}</figcaption></figure>)}</div>}</div>}
 
         <div>
           <h2 className="text-2xl font-bold text-white md:text-3xl">{title}</h2>

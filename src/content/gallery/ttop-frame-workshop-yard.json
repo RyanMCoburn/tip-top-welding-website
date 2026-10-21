@@ -6,5 +6,6 @@
   "alt": "Custom aluminum T-top frame with welded supports outside the workshop",
   "description": "Project photo • T-top frame during fabrication, before the canopy is fitted.",
   "image": "/images/portfolio/ttop-frame-workshop-yard.webp",
-  "sortOrder": -106
+  "sortOrder": -106,
+  "published": false
 }

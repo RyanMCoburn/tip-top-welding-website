@@ -1,25 +1,175 @@
 export type ServiceMedia = { src:string; alt:string; caption:string; additional?:ServiceMedia[] }
 export const SERVICE_MEDIA:Record<string,ServiceMedia> = {
-  't-top-fabrication-repairs': {"src":"/images/portfolio/custom-ttop-with-rod-holders.webp","alt":"Custom aluminum T-top with integrated rod holders in the welding workshop","caption":"Custom T-top and integrated rod holders • workshop fabrication","additional":[{"src":"/images/portfolio/ttop-frame-workshop-yard.webp","alt":"Custom aluminum T-top frame with welded supports outside the workshop","caption":"Custom T-top frame • fabrication stage"},{"src":"/images/portfolio/ttop-dockside-welding.webp","alt":"Welder working on a boat T-top frame at a dock","caption":"T-top repair • dockside welding"}]},
-  'swim-platform-railings': {"src":"/images/portfolio/swim-platform-railing-installation.webp","alt":"Custom metal rail assembly being fitted on a yacht swim platform","caption":"Swim-platform railing assembly • during installation"},
-  'custom-rod-holders': {"src":"/images/portfolio/custom-rod-holders-installed.webp","alt":"Polished custom rod-holder rack fitted behind a boat leaning post","caption":"Custom rod-holder rack • installed behind the leaning post","additional":[{"src":"/images/portfolio/custom-rod-holder-racks-black.webp","alt":"Black rod-holder racks mounted behind a boat console and around the T-top","caption":"Custom rod-holder layout • Naples"}]},
-  'fuel-tanks': {"src":"/images/portfolio/formed-tank-with-fill-pipes.webp","alt":"Custom formed aluminum tank with angled fill pipes","caption":"Custom formed aluminum tank • workshop fabrication","additional":[{"src":"/images/portfolio/aluminum-fuel-tank-fittings.webp","alt":"Aluminum fuel tank showing sender and pipe fittings","caption":"Aluminum tank • fittings and welded construction"}]},
-  'water-tanks': {"src":"/images/portfolio/water-tank-fitted-under-berth.webp","alt":"Water tank fitted under a yacht berth","caption":"Water tank fitted beneath a yacht berth • before the bed structure was replaced"},
-  'louvers-privacy-screens': {"src":"/images/portfolio/louvered-screen-gate-detail.webp","alt":"Installed white louvered enclosure and access gate","caption":"Louvered equipment enclosure with access gate","additional":[{"src":"/images/portfolio/horizontal-privacy-screens.webp","alt":"Horizontal metal privacy screens between stone columns","caption":"Custom horizontal privacy screens"}]},
-  'custom-gates': {"src":"/images/services/decorative-gate.webp","alt":"Installed arched metal gate with decorative scrollwork","caption":"Decorative entry gate • project installation photo"},
-  'pontoon-repairs': {src:'/images/services/pontoon-work.webp',alt:'Pontoon boat supported on stands outside the workshop',caption:'Pontoon boat in the workshop yard'},
-  'skeg-repairs': {src:'/images/portfolio/restored-skeg-december-2024.webp',alt:'Outboard skeg after a replacement section was welded and shaped',caption:'Skeg replacement • welded and shaped, before repainting',additional:[{src:'/images/repairs/cavitation-plate-restored-may2026.webp',alt:'Outboard cavitation plate with a rebuilt aluminum edge',caption:'Cavitation-plate edge rebuilt • bare aluminum before repainting'}]},
-  'decorative-rails': {src:'/images/portfolio/seaweed-stair-rail.webp',alt:'Custom seaweed-pattern railing following an indoor staircase',caption:'Seaweed-pattern stair railing • project installation photo',additional:[
-    {src:'/images/services/decorative-gate.webp',alt:'Installed arched metal gate with decorative scrollwork',caption:'Decorative gate with custom scrollwork'},
-    {src:'/images/services/decorative-railing.webp',alt:'Installed metal railing along a covered walkway',caption:'Walkway railing'},
-    {src:'/images/services/stair-railing.webp',alt:'Stair railing with bolted base and decorative post detail',caption:'Stair railing and mounting detail'},
-  ]},
-  'marine-welding': {src:'/images/portfolio/yacht-stainless-railing.webp',alt:'Yacht upper-deck stainless railing in a marina',caption:'Yacht railwork • project photo'},
-  'mobile-welding': {src:'/images/services/mobile-welding-truck.webp',alt:'Tip Top Welding branded mobile welding truck',caption:'Tip Top Welding mobile welding • promotional image'},
-  'aluminum-welding': {src:'/images/gallery/sea-turtle-mailbox-stand.webp',alt:'Sea Turtle aluminum mailbox stand in the workshop',caption:'Aluminum mailbox fabrication • workshop promotional image'},
-  'stainless-steel': {src:'/images/gallery/nautilus-pool-rail.webp',alt:'Nautilus stainless pool rail design',caption:'Nautilus pool rail • promotional design image'},
-  'bow-rail-repairs': {"src":"/images/repairs/safe-cove-bow-rail-after-feb2023.webp","alt":"Repaired yacht bow rail fitted around the forward deck inside a covered Safe Cove work bay","caption":"Bow-rail repair • Safe Cove, February 2023","additional":[{"src":"/images/repairs/ian-red-trawler-bow-rail-installed.webp","alt":"New bow rail installed on a red-hulled trawler","caption":"New trawler bow rail • other storm restoration still in progress"},{"src":"/images/portfolio/boat-rail-fitted-curved-returns.webp","alt":"Installed boat railing with outward curved returns above the side deck","caption":"Custom boat railing • curved returns"}]},
-  'pool-railings': {src:'/images/gallery/dolphin-pool-rail.webp',alt:'Dolphin pool rail design',caption:'Dolphin pool rail • promotional design image'},
-  'custom-metal': {src:'/images/services/mailbox-installation.webp',alt:'Custom mailbox installation shown in Tip Top Welding promotional material',caption:'Custom mailbox installation • project promotional image'},
-  'nautical-metal-art': {src:'/images/gallery/seahorse-mailbox-stand.webp',alt:'Seahorse mailbox stand design',caption:'Seahorse mailbox stand • design concept'},
+  "bow-rail-repairs": {
+    "src": "/images/portfolio/boat-rail-fitted-curved-returns.webp",
+    "alt": "Installed polished boat railing with curved returns",
+    "caption": "Custom boat railing • fitted curved returns",
+    "additional": [
+      {
+        "src": "/images/portfolio/cruisers-yacht-railwork-january-2023.webp",
+        "alt": "Meridian yacht undergoing bow-rail replacement",
+        "caption": "Meridian yacht • rail replacement during installation"
+      }
+    ]
+  },
+  "pontoon-repairs": {
+    "src": "/images/portfolio/pontoon-welded-repair-patch.webp",
+    "alt": "Pontoon repair patch with a continuous perimeter weld",
+    "caption": "Pontoon patch repair • weld detail"
+  },
+  "skeg-repairs": {
+    "src": "/images/repairs/cavitation-plate-restored-may2026.webp",
+    "alt": "Cavitation plate after a replacement edge was welded and shaped",
+    "caption": "Cavitation-plate repair • shaped aluminum before repainting",
+    "additional": [
+      {
+        "src": "/images/portfolio/lower-unit-skeg-rebuilt-2026.webp",
+        "alt": "Detached lower unit with a welded and shaped skeg section",
+        "caption": "Skeg repair detail • shaped aluminum before final finishing"
+      }
+    ]
+  },
+  "t-top-fabrication-repairs": {
+    "src": "/images/portfolio/custom-rod-holder-racks-black.webp",
+    "alt": "Fitted T-top and rod-holder layout aboard a boat in Naples",
+    "caption": "Fitted T-top and rod-holder layout • Naples",
+    "additional": [
+      {
+        "src": "/images/portfolio/custom-ttop-with-rod-holders.webp",
+        "alt": "Custom T-top assembly with integrated rod holders in the workshop",
+        "caption": "Custom T-top assembly • fabrication stage"
+      }
+    ]
+  },
+  "custom-rod-holders": {
+    "src": "/images/portfolio/custom-rod-holders-installed.webp",
+    "alt": "Polished rod-holder assembly installed behind a boat leaning post",
+    "caption": "Custom rod holders • installed assembly",
+    "additional": [
+      {
+        "src": "/images/portfolio/custom-rod-holder-racks-black.webp",
+        "alt": "Fitted T-top and rod-holder layout aboard a boat in Naples",
+        "caption": "Fitted T-top and rod-holder layout • Naples"
+      }
+    ]
+  },
+  "swim-platform-railings": {
+    "src": "/images/portfolio/swim-platform-railing-installation.webp",
+    "alt": "Custom rail assembly being fitted on a yacht swim platform",
+    "caption": "Swim-platform rail assembly • during fitting"
+  },
+  "fuel-tanks": {
+    "src": "/images/portfolio/custom-welded-tank.webp",
+    "alt": "Custom aluminum tank showing welded seams and fittings",
+    "caption": "Custom aluminum tank • welded fabrication",
+    "additional": [
+      {
+        "src": "/images/portfolio/formed-tank-with-fill-pipes.webp",
+        "alt": "Custom shaped aluminum tank with two angled pipes",
+        "caption": "Formed aluminum tank • pipe connections and welded seams"
+      }
+    ]
+  },
+  "marine-welding": {
+    "src": "/images/portfolio/yacht-stainless-railing.webp",
+    "alt": "Stainless upper-deck railwork on an Azimut yacht",
+    "caption": "Azimut yacht • stainless railwork",
+    "additional": [
+      {
+        "src": "/images/portfolio/azimut-flybridge-finished-railwork.webp",
+        "alt": "Finished yacht flybridge with teak decking and stainless perimeter rails",
+        "caption": "Finished flybridge • stainless perimeter railings"
+      }
+    ]
+  },
+  "dock-marina": {
+    "src": "/images/portfolio/fish-cleaning-table.webp",
+    "alt": "Custom metal fish-shaped cleaning table installed beside the water",
+    "caption": "Custom waterfront table • fitted top and metal frame"
+  },
+  "decorative-rails": {
+    "src": "/images/portfolio/geometric-stair-railing.webp",
+    "alt": "Custom geometric railing panels fitted to an interior staircase",
+    "caption": "Geometric stair railings • installed",
+    "additional": [
+      {
+        "src": "/images/portfolio/horizontal-entry-railings.webp",
+        "alt": "Installed horizontal entrance and walkway railings",
+        "caption": "Entrance and walkway railings • installed"
+      },
+      {
+        "src": "/images/portfolio/stair-railing-detail.webp",
+        "alt": "Finished exterior stair railing with decorative collars and mounting plates",
+        "caption": "Stair railing • finish and mounting detail"
+      }
+    ]
+  },
+  "custom-gates": {
+    "src": "/images/services/decorative-gate.webp",
+    "alt": "Installed arched metal gate with detailed scrollwork",
+    "caption": "Custom scrollwork gate • installed",
+    "additional": [
+      {
+        "src": "/images/portfolio/dolphin-garden-gate.webp",
+        "alt": "Installed garden gate with a dolphin design",
+        "caption": "Dolphin garden gate • installed"
+      }
+    ]
+  },
+  "pool-railings": {
+    "src": "/images/portfolio/sea-turtle-pool-rail-project.webp",
+    "alt": "Polished Sea Turtle-shaped pool rail shown on a temporary display base",
+    "caption": "Sea Turtle pool rail • completed metalwork on a display base"
+  },
+  "louvers-privacy-screens": {
+    "src": "/images/portfolio/horizontal-privacy-screens.webp",
+    "alt": "Finished horizontal privacy screens fitted between stone columns",
+    "caption": "Custom privacy screens • finished installation",
+    "additional": [
+      {
+        "src": "/images/portfolio/louvered-equipment-screen.webp",
+        "alt": "Installed white louvered enclosure with a matching access gate",
+        "caption": "Louvered enclosure • installed panels and access gate"
+      }
+    ]
+  },
+  "custom-metal": {
+    "src": "/images/portfolio/fish-cleaning-table.webp",
+    "alt": "Custom metal fish-shaped cleaning table installed beside the water",
+    "caption": "Custom waterfront table • fitted top and metal frame"
+  },
+  "nautical-metal-art": {
+    "src": "/images/portfolio/gold-patina-dolphin.webp",
+    "alt": "Custom dolphin metal artwork with a gold patina",
+    "caption": "Dolphin metal art • gold patina finish",
+    "additional": [
+      {
+        "src": "/images/portfolio/twisted-fish-sculpture.webp",
+        "alt": "Custom metal fish and starfish sculpture with textured details",
+        "caption": "Custom fish sculpture • fabricated metalwork"
+      }
+    ]
+  },
+  "mobile-welding": {
+    "src": "/images/portfolio/ttop-dockside-welding.webp",
+    "alt": "Welder carrying out T-top work aboard a boat at a dock",
+    "caption": "On-site T-top welding • project work in progress"
+  },
+  "aluminum-welding": {
+    "src": "/images/portfolio/custom-welded-tank.webp",
+    "alt": "Custom aluminum tank showing welded seams and fittings",
+    "caption": "Custom aluminum tank • welded fabrication"
+  },
+  "stainless-steel": {
+    "src": "/images/portfolio/azimut-flybridge-finished-railwork.webp",
+    "alt": "Finished yacht flybridge with teak decking and stainless perimeter rails",
+    "caption": "Finished flybridge • stainless perimeter railings",
+    "additional": [
+      {
+        "src": "/images/portfolio/sea-turtle-pool-rail-project.webp",
+        "alt": "Polished Sea Turtle-shaped pool rail shown on a temporary display base",
+        "caption": "Sea Turtle pool rail • completed metalwork on a display base"
+      }
+    ]
+  }
 }

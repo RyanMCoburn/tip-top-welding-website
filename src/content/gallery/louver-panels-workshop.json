@@ -6,5 +6,6 @@
   "alt": "Louvered metal enclosure panels assembled on tables in the welding workshop",
   "description": "Project photo • louvered panels during fabrication in the workshop.",
   "image": "/images/portfolio/louver-panels-workshop.webp",
-  "sortOrder": -95
+  "sortOrder": -95,
+  "published": false
 }

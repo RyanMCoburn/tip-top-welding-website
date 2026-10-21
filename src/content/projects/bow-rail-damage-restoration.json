@@ -4,5 +4,6 @@
   "category": "Bow Rails",
   "description": "Bow railing photographed dockside.",
   "image": "/images/portfolio/bow-rail-dockside.webp",
-  "sortOrder": -30
+  "sortOrder": -30,
+  "published": false
 }

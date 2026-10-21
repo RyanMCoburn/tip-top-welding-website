@@ -1,6 +1,5 @@
 import CTAButton from '../components/ctabutton'
 import BeforeAfterShowcase from '../components/beforeaftershowcase'
-import DemoContentBanner from '../components/democontentbanner'
 import GalleryPhotoCard from '../components/galleryphotocard'
 import SectionHeading from '../components/sectionheading'
 import WorkCategoryCard from '../components/workcategorycard'
@@ -55,52 +54,6 @@ export default function Projects() {
         </div>
       </section>
 
-      {beforeAfterProjects.length > 0 && (
-        <section id="before-after" className="section-space scroll-mt-28 bg-navy-950">
-          <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
-            <SectionHeading
-              title="Before & After"
-              subtitle="Bow rails, pontoons, skegs and cavitation plates, shown before and after the work."
-            />
-            <div className="grid gap-8">
-              {beforeAfterProjects.map((project) => (
-                <BeforeAfterShowcase key={project.id} project={project} />
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {workExamples.length > 0 && (
-        <section className="section-space bg-navy-900">
-          <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
-            <SectionHeading
-              title="Work Examples"
-              subtitle="Pool rail and mailbox stand designs, workshop photography, and promotional artwork from Tip Top Welding LLC."
-            />
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {workExamples.map((project) => (
-                <article key={project.id} className="card-premium overflow-hidden rounded-xl">
-                  <GalleryPhotoCard
-                    src={project.image}
-                    alt={project.title}
-                    label={project.title}
-                    placeholder={project.placeholder}
-                  />
-                  <div className="border-t border-navy-700/60 px-5 py-4">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-accent">{project.category}</p>
-                    <h3 className="mt-1 text-lg font-semibold text-white">{project.title}</h3>
-                    {project.description && (
-                      <p className="mt-2 text-sm leading-relaxed text-steel-400">{project.description}</p>
-                    )}
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
       {featured && (
         <section className="section-space bg-navy-900">
           <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
@@ -109,6 +62,8 @@ export default function Projects() {
                 src={featured.image}
                 alt={featured.imageAlt}
                 label={featured.title}
+                landscape
+                hideCaption
               />
               <div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-accent">{featured.category}</p>
@@ -125,6 +80,54 @@ export default function Projects() {
                   </ul>
                 )}
               </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {workExamples.length > 0 && (
+        <section className="section-space bg-navy-900">
+          <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
+            <SectionHeading
+              title="Work Examples"
+              subtitle="Selected architectural fabrication, photographed in its finished setting."
+            />
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {workExamples.map((project) => (
+                <article key={project.id} className="card-premium overflow-hidden rounded-xl">
+                  <GalleryPhotoCard
+                    src={project.image}
+                    alt={project.title}
+                    label={project.title}
+                    placeholder={project.placeholder}
+                    landscape
+                    hideCaption
+                  />
+                  <div className="border-t border-navy-700/60 px-5 py-4">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-accent">{project.category}</p>
+                    <h3 className="mt-1 text-lg font-semibold text-white">{project.title}</h3>
+                    {project.description && (
+                      <p className="mt-2 text-sm leading-relaxed text-steel-400">{project.description}</p>
+                    )}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {beforeAfterProjects.length > 0 && (
+        <section id="before-after" className="section-space scroll-mt-28 bg-navy-950">
+          <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
+            <SectionHeading
+              title="Before & After"
+              subtitle="Bow-rail, pontoon, and cavitation-plate repairs, with the repair stage described for each photo."
+            />
+            <div className="grid gap-8">
+              {beforeAfterProjects.map((project) => (
+                <BeforeAfterShowcase key={project.id} project={project} />
+              ))}
             </div>
           </div>
         </section>
@@ -180,26 +183,7 @@ export default function Projects() {
         </div>
       </section>
 
-      <section className="section-space bg-navy-900">
-        <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
-          <SectionHeading
-            title="Brand Highlights"
-            subtitle="Social and brand graphics — reference only, not used as main site hero imagery."
-          />
-          <DemoContentBanner className="mb-8" />
-          <div className="grid gap-6 md:grid-cols-3">
-            {[
-              { src: '/images/gallery/dolphin-pool-rail.webp', alt: 'Dolphin pool rail promotional image', label: 'Dolphin Pool Rail' },
-              { src: '/images/gallery/nautilus-pool-rail.webp', alt: 'Nautilus pool rail promotional image', label: 'Nautilus Pool Rail' },
-              { src: '/images/gallery/sea-turtle-mailbox-stand.webp', alt: 'Sea turtle mailbox stand workshop photo', label: 'Sea Turtle Mailbox Stand' },
-            ].map((item) => (
-              <figure key={item.label} className="card-premium overflow-hidden rounded-xl p-3">
-                <GalleryPhotoCard src={item.src} alt={item.alt} label={item.label} caption={item.label} />
-              </figure>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       <WhyChooseTipTop />
       <MarineWeldingSEO />

@@ -27,18 +27,9 @@ export default function Gallery() {
           </section>
 
           <nav aria-label="Browse project categories" className="mb-12 flex flex-wrap justify-center gap-2">
+            <a href="#before-after" className="rounded-full border border-navy-700 px-4 py-2 text-sm text-steel-300 hover:border-accent hover:text-white focus-visible:outline-2 focus-visible:outline-accent">Before &amp; After</a>
             {sections.map(section => <a key={section.id} href={`#${section.id}`} className="rounded-full border border-navy-700 px-4 py-2 text-sm text-steel-300 hover:border-accent hover:text-white focus-visible:outline-2 focus-visible:outline-accent">{section.label}</a>)}
           </nav>
-
-          {beforeAfterProjects.length > 0 && (
-            <section id="before-after" aria-labelledby="before-after-title" className="mb-16 scroll-mt-28">
-              <h2 id="before-after-title" className="text-3xl font-bold text-white">Marine Repairs: Before &amp; After</h2>
-              <p className="mt-3 mb-8 max-w-2xl text-steel-400">Bow rails, pontoon welding, skeg replacement and cavitation-plate repairs, shown before and after the work. Select a photo to see it full size.</p>
-              <div className="grid gap-8">
-                {beforeAfterProjects.map(project => <BeforeAfterShowcase key={project.id} project={project} />)}
-              </div>
-            </section>
-          )}
 
           <div className="space-y-14">
             {sections.map((section, i) => (
@@ -76,6 +67,16 @@ export default function Gallery() {
               </div>
             ))}
           </div>
+          {beforeAfterProjects.length > 0 && (
+            <section id="before-after" aria-labelledby="before-after-title" className="mt-20 scroll-mt-28">
+              <h2 id="before-after-title" className="text-3xl font-bold text-white">Marine Repairs: Before &amp; After</h2>
+              <p className="mt-3 mb-8 max-w-2xl text-steel-400">Bow-rail, pontoon, and cavitation-plate repairs. Captions identify the work shown and any finishing still to follow. Select a photo to see it full size.</p>
+              <div className="grid gap-8">
+                {beforeAfterProjects.map(project => <BeforeAfterShowcase key={project.id} project={project} />)}
+              </div>
+            </section>
+          )}
+
         </div>
       </section>
 

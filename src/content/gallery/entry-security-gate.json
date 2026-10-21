@@ -6,5 +6,6 @@
   "alt": "Metal entry gate with matching side panels",
   "description": "Project photo • entry gate and matching fixed side panels.",
   "image": "/images/portfolio/entry-security-gate.webp",
-  "sortOrder": -50
+  "sortOrder": -50,
+  "published": false
 }

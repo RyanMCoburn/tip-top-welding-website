@@ -2,7 +2,6 @@ import { BRAND, SERVICE_AREAS } from '../config/brand'
 import { GALLERY_CATEGORIES, REAL_WORK_PREVIEW } from '../data/images'
 import {
   BEFORE_AFTER_PROJECTS,
-  FEATURED_PROJECTS,
 } from '../data/projects'
 import type {
   BeforeAfterProject,
@@ -133,13 +132,13 @@ export function getSocialLinks(): SocialLinksMap {
 
 export function getCmsGalleryPhotos(): CmsGalleryPhotoEntry[] {
   return sortByOrder(
-    entriesFromModules(galleryModules).filter((item) => item.title?.trim()),
+    entriesFromModules(galleryModules).filter((item) => item.title?.trim() && item.published !== false),
   )
 }
 
 export function getCmsProjects(): CmsProjectEntry[] {
   return sortByOrder(
-    entriesFromModules(projectModules).filter((item) => item.title?.trim()),
+    entriesFromModules(projectModules).filter((item) => item.title?.trim() && item.published !== false),
   )
 }
 
@@ -252,7 +251,7 @@ export function getFeaturedProject(): FeaturedProject | undefined {
     .filter((project): project is FeaturedProject => project !== null)
 
   if (cmsFeatured.length > 0) return cmsFeatured[0]
-  return FEATURED_PROJECTS[0]
+  return undefined
 }
 
 export interface WorkExampleCard {

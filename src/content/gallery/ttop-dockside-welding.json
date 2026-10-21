@@ -6,5 +6,6 @@
   "alt": "Welder working on a boat T-top frame at a dock",
   "description": "Project photo • T-top welding in progress at the dock.",
   "image": "/images/portfolio/ttop-dockside-welding.webp",
-  "sortOrder": -106
+  "sortOrder": -106,
+  "published": false
 }

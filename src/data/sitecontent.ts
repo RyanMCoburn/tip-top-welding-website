@@ -97,7 +97,7 @@ export const WORK_TYPES_PAGE = {
   eyebrow: 'What We Do',
   headline: 'Marine welding and custom coastal metalwork.',
   description:
-    'Explore pool rail and mailbox stand designs alongside the welding and fabrication services we offer. Promotional artwork and design concepts are labeled.',
+    'Explore selected yacht railwork, architectural metalwork, and clear repair comparisons. Each project is described for the work shown.',
   typesHeading: 'Types of Work',
   typesSubtitle:
     'Bow rails, pontoons, skegs, pool railings, decorative work, marina hardware, and custom aluminum and stainless fabrication across Southwest Florida.',

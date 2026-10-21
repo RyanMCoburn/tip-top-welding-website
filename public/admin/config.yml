@@ -28,6 +28,7 @@ collections:
     summary: '{{title}} — {{category}}'
     sortable_fields: [sortOrder, title, category]
     fields:
+      - { label: Published on website, name: published, widget: boolean, default: true, required: false, hint: "Turn off to keep a photo or comparison in the editor without displaying it publicly" }
       - { label: Title, name: title, widget: string, hint: 'Short photo title, e.g. Bow Rail Repair' }
       - label: URL slug
         name: slug
@@ -74,6 +75,7 @@ collections:
     summary: '{{title}} — {{category}}'
     sortable_fields: [sortOrder, title, category]
     fields:
+      - { label: Published on website, name: published, widget: boolean, default: true, required: false, hint: "Turn off to keep a photo or comparison in the editor without displaying it publicly" }
       - { label: Title, name: title, widget: string }
       - label: URL slug
         name: slug
