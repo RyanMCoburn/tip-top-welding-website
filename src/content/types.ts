@@ -27,6 +27,7 @@ export const GALLERY_CATEGORY_OPTIONS = [
 export type GalleryCategoryOption = (typeof GALLERY_CATEGORY_OPTIONS)[number]
 
 export interface CmsGalleryPhoto {
+  designId?: string
   published?: boolean
   title: string
   slug?: string
