@@ -64,3 +64,7 @@ Aluminum, Stainless, Pool Railings, Decorative Work, Pontoon, Skeg, Nautical Art
 | `src/data/images.ts` | Image path registry + gallery categories |
 | `src/data/projects.ts` | Real before/after + featured projects |
 | `scripts/process-assets.py` | Crop/copy source PNGs into public folders |
+
+## Pool rail photography
+
+Only genuine photographs of final, permanent pool rail installations may be displayed. Temporary display bases, workshop views, test fits, promotional flyers, renderings, and edited installation mockups are excluded from pool rail imagery across the store, gallery, collections, and service pages. Existing originals are retained on disk. No verified final installation photographs are currently selected; retain the product names, prices, and order/quote controls without substituting another photograph.
