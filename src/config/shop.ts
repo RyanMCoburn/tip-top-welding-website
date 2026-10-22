@@ -1,5 +1,17 @@
 import links from '../content/settings/design-checkout.json'
 export type ShopDesign = { id:string; name:string; price:number|null }
+export type DesignMedia = { src: string; label: string; alt: string }
+/** Explicit mappings keep design selection tied to the correct photograph. */
+export const DESIGN_MEDIA: Record<string, DesignMedia> = {
+  'dolphin-pool-rail': {src:'/images/portfolio/dolphin-poolside-project.webp', label:'Project photo • poolside display', alt:'Polished Dolphin pool rail beside a residential pool on a display base'},
+  'nautilus-pool-rail': {src:'/images/portfolio/nautilus-poolside-project.webp', label:'Project photo • poolside display', alt:'Nautilus pool rail beside a pool on a display base'},
+  'sea-turtle-pool-rail': {src:'/images/portfolio/sea-turtle-poolside-project.webp', label:'Project photo • poolside test fit', alt:'Sea Turtle pool rail during a test fit beside a stone-edge pool on a temporary base'},
+  'sea-turtle-mailbox': {src:'/images/portfolio/sea-turtle-stand-project.webp', label:'Project photo • completed metalwork', alt:'Fabricated Sea Turtle mailbox stand outdoors'},
+  'seahorse-mailbox': {src:'/images/portfolio/seahorse-stand-project.webp', label:'Project photo • completed metalwork', alt:'Fabricated Seahorse mailbox stand with a flat mounting top'},
+  ...Object.fromEntries(['anchor','big-horned-owl','hammerhead-shark','manatee','pelican','shrimp'].map(slug=>[`${slug}-mailbox`, {src:`/images/gallery/${slug}-mailbox-stand.webp`,label:'Design concept • promotional image',alt:`${slug.replaceAll('-',' ')} mailbox stand design concept`} ])),
+  ...Object.fromEntries(['captains-wheel','coral','crab'].map(slug=>[`${slug}-pool-rail`, {src:`/images/gallery/${slug}-pool-rail.webp`,label:'Design concept • promotional image',alt:`${slug.replaceAll('-',' ')} pool rail design concept`} ])),
+}
+export function designMedia(designId: string): DesignMedia | undefined { return DESIGN_MEDIA[designId] }
 export const SHOP = {
   mailbox: { title:'Custom Mailbox Stands', image:'/images/gallery/sea-turtle-mailbox-stand.webp', material:'Mill-finish aluminum', designs:[
     {id:'sea-turtle-mailbox',name:'Sea Turtle',price:4500},

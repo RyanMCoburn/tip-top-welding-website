@@ -37,13 +37,13 @@ export default function BeforeAfterProject({
           <div className="absolute left-4 top-4 z-10 rounded-sm bg-navy-950/90 px-3 py-1 text-xs font-bold uppercase tracking-wider text-steel-400">
             Before
           </div>
-          <img src={beforeImage} alt={beforeAlt} className="aspect-[4/3] w-full object-cover" loading="lazy" />
+          <img src={beforeImage} alt={beforeAlt} className="aspect-[4/3] w-full object-contain bg-navy-950" loading="lazy" />
         </div>
         <div className="relative border-t border-navy-700 md:border-l md:border-t-0">
           <div className="absolute left-4 top-4 z-10 rounded-sm bg-accent/90 px-3 py-1 text-xs font-bold uppercase tracking-wider text-navy-950">
             After
           </div>
-          <img src={afterImage} alt={afterAlt} className="aspect-[4/3] w-full object-cover" loading="lazy" />
+          <img src={afterImage} alt={afterAlt} className="aspect-[4/3] w-full object-contain bg-navy-950" loading="lazy" />
         </div>
       </div>
 
