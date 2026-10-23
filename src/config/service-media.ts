@@ -1,16 +1,10 @@
 export type ServiceMedia = { src:string; alt:string; caption:string; additional?:ServiceMedia[] }
 export const SERVICE_MEDIA:Record<string,ServiceMedia> = {
   "bow-rail-repairs": {
-    "src": "/images/portfolio/boat-rail-fitted-curved-returns.webp",
-    "alt": "Installed polished boat railing with curved returns",
-    "caption": "Custom boat railing • fitted curved returns",
-    "additional": [
-      {
-        "src": "/images/portfolio/cruisers-yacht-railwork-january-2023.webp",
-        "alt": "Meridian yacht undergoing bow-rail replacement",
-        "caption": "Meridian yacht • rail replacement during installation"
-      }
-    ]
+    "src":"/images/portfolio/polished-yacht-bow-rail-dockside.webp",
+    "alt":"Finished polished yacht bow rail and angled supports viewed from the dock",
+    "caption":"Custom yacht bow rail • finished dockside installation",
+    "additional":[{"src":"/images/portfolio/boat-rail-fitted-curved-returns.webp","alt":"Installed boat railing with fitted curved returns","caption":"Custom boat rail • fitted curved returns"}]
   },
   "pontoon-repairs": {
     "src": "/images/portfolio/pontoon-welded-repair-patch.webp",
@@ -25,9 +19,9 @@ export const SERVICE_MEDIA:Record<string,ServiceMedia> = {
     ]
   },
   "t-top-fabrication-repairs": {
-    "src": "/images/portfolio/custom-rod-holder-racks-black.webp",
-    "alt": "Fitted T-top and rod-holder layout aboard a boat in Naples",
-    "caption": "Fitted T-top and rod-holder layout • Naples",
+    "src": "/images/portfolio/rear-hardtop-rod-holders-polished.webp",
+    "alt": "Polished rod holders fitted across the back of a boat hardtop",
+    "caption": "Rear hardtop rod holders • fitted installation",
     "additional": [
       {
         "src": "/images/portfolio/custom-ttop-with-rod-holders.webp",
@@ -37,21 +31,15 @@ export const SERVICE_MEDIA:Record<string,ServiceMedia> = {
     ]
   },
   "custom-rod-holders": {
-    "src": "/images/portfolio/custom-rod-holders-installed.webp",
-    "alt": "Polished rod-holder assembly installed behind a boat leaning post",
-    "caption": "Custom rod holders • installed assembly",
-    "additional": [
-      {
-        "src": "/images/portfolio/custom-rod-holder-racks-black.webp",
-        "alt": "Fitted T-top and rod-holder layout aboard a boat in Naples",
-        "caption": "Fitted T-top and rod-holder layout • Naples"
-      }
-    ]
+    "src":"/images/portfolio/rear-hardtop-rod-holders-polished.webp",
+    "alt":"Polished custom rod holders mounted across the rear edge of a boat hardtop",
+    "caption":"Custom rear hardtop rod holders • finished installation"
   },
   "swim-platform-railings": {
-    "src": "/images/portfolio/swim-platform-railing-installation.webp",
-    "alt": "Davit assembly being fitted on a yacht swim platform",
-    "caption": "Swim-platform davit assembly • during fitting"
+    "src":"/images/portfolio/yacht-stern-access-rail.webp",
+    "alt":"Stainless stern access railing above a teak yacht deck",
+    "caption":"Yacht stern access railing • finished installation",
+    "additional":[{"src":"/images/portfolio/swim-platform-railing-installation.webp","alt":"Custom davit assembly being fitted on a yacht swim platform","caption":"Swim-platform davit • during fitting"}]
   },
   "fuel-tanks": {
     "src": "/images/portfolio/custom-welded-tank.webp",
