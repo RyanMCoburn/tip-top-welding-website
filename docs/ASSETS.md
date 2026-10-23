@@ -64,3 +64,7 @@ Aluminum, Stainless, Pool Railings, Decorative Work, Pontoon, Skeg, Nautical Art
 | `src/data/images.ts` | Image path registry + gallery categories |
 | `src/data/projects.ts` | Real before/after + featured projects |
 | `scripts/process-assets.py` | Crop/copy source PNGs into public folders |
+
+## Pool rail photography
+
+Only genuine photographs of final, permanent pool rail installations may be displayed. Temporary display bases, workshop views, test fits, promotional flyers, renderings, and edited installation mockups are excluded from pool rail imagery across the store, gallery, collections, and service pages. Existing originals are retained on disk. Eight owner-supplied final installation photographs are selected in src/config/pool-installations.ts. Source uploads: 5108.heic, 2946.jpg, 2713.jpg, 2679.jpg, 2677.jpg, 2627.jpg, and the two 2264/2265 JPG files. The featured views are Dolphin 5108, Nautilus 2265, and Sea Turtle 2679.

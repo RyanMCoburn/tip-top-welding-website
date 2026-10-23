@@ -5,7 +5,7 @@ export const SHOP = {
     {id:'sea-turtle-mailbox',name:'Sea Turtle',price:4500},
     ...['Anchor','Big Horned Owl','Burrowing Owl','Dolphin','Hammerhead Shark','Manatee','Pelican','Seahorse','Shrimp'].map(name=>({id:`${name.toLowerCase().replaceAll(' ','-')}-mailbox`,name,price:null})),
   ] as ShopDesign[] },
-  pool: { title:'Custom Pool Rails', image:'/images/gallery/nautilus-pool-rail.webp', material:'Polished stainless steel', designs:[
+  pool: { title:'Custom Pool Rails', image:'/images/pool-installations/nautilus-installed-white-deck.webp', material:'Polished stainless steel', designs:[
     {id:'nautilus-pool-rail',name:'Nautilus',price:3300},
     {id:'dolphin-pool-rail',name:'Dolphin',price:3300},
     {id:'sea-turtle-pool-rail',name:'Sea Turtle',price:4288},

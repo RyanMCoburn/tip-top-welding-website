@@ -1,5 +1,7 @@
+import { FEATURED_POOL_INSTALLATIONS } from './pool-installations'
 export type ServiceMedia = { src:string; alt:string; caption:string; additional?:ServiceMedia[] }
 export const SERVICE_MEDIA:Record<string,ServiceMedia> = {
+  'pool-railings': {...FEATURED_POOL_INSTALLATIONS[0], additional:FEATURED_POOL_INSTALLATIONS.slice(1).map(photo=>({...photo}))},
   "bow-rail-repairs": {
     "src":"/images/portfolio/polished-yacht-bow-rail-dockside.webp",
     "alt":"Finished polished yacht bow rail and angled supports viewed from the dock",
@@ -97,15 +99,6 @@ export const SERVICE_MEDIA:Record<string,ServiceMedia> = {
       {"src":"/images/portfolio/dolphin-garden-gate.webp","alt":"Installed garden gate with a dolphin design","caption":"Dolphin garden gate • installed"}
     ]
   },
-  "pool-railings": {
-    "src":"/images/portfolio/dolphin-poolside-project.webp",
-    "alt":"Polished Dolphin pool rail beside a residential pool on a display base",
-    "caption":"Dolphin pool rail • poolside display",
-    "additional":[
-      {"src":"/images/portfolio/nautilus-poolside-project.webp","alt":"Nautilus rail shown beside a pool on a display base","caption":"Nautilus • poolside display"},
-      {"src":"/images/portfolio/sea-turtle-poolside-project.webp","alt":"Sea Turtle rail during a test fit in a stone-edge pool on a temporary base","caption":"Sea Turtle • poolside test fit"}
-    ]
-  },
   "louvers-privacy-screens": {
     "src": "/images/portfolio/horizontal-privacy-screens.webp",
     "alt": "Finished horizontal privacy screens fitted between stone columns",
@@ -148,13 +141,6 @@ export const SERVICE_MEDIA:Record<string,ServiceMedia> = {
   "stainless-steel": {
     "src": "/images/portfolio/azimut-flybridge-finished-railwork.webp",
     "alt": "Finished yacht flybridge with teak decking and stainless perimeter rails",
-    "caption": "Finished flybridge • stainless perimeter railings",
-    "additional": [
-      {
-        "src": "/images/portfolio/sea-turtle-pool-rail-project.webp",
-        "alt": "Polished Sea Turtle-shaped pool rail shown on a temporary display base",
-        "caption": "Sea Turtle pool rail • completed metalwork on a display base"
-      }
-    ]
+    "caption": "Finished flybridge • stainless perimeter railings"
   }
 }

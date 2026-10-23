@@ -653,7 +653,7 @@ body {
     0 0 0 1px color-mix(in srgb, var(--theme-accent) 25%, transparent);
 }
 
-/* Gallery photo hover zoom */
+/* Keep the full photograph visible, including its outer edges. */
 .gallery-photo-frame {
   border: 1px solid var(--theme-navy-700);
   background: var(--theme-navy-900);
@@ -676,7 +676,7 @@ body {
 }
 
 .gallery-photo-card:hover .gallery-photo-img {
-  transform: scale(1.04);
+  transform: none;
 }
 
 /* CTA buttons — light mode readability */
