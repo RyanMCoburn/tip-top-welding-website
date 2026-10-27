@@ -9,10 +9,10 @@ export interface PageMeta {
   noindex?: boolean
 }
 
-const HOMEPAGE_TITLE = 'Tip Top Welding LLC | Mobile Welding Cape Coral FL'
+const HOMEPAGE_TITLE = 'Mobile Welding Cape Coral | Aluminum & Stainless | Tip Top Welding'
 
 const HOMEPAGE_DESCRIPTION =
-  'Tip Top Welding LLC provides mobile aluminum and stainless TIG welding in Cape Coral and Southwest Florida, specializing in yacht welding, bow rail repairs, pontoons, skegs, fuel tanks, pool railings, gates, stairs, decorative rails, and custom coastal metal art.'
+  'Mobile aluminum and stainless steel welding in Cape Coral, Fort Myers and Southwest Florida. Marine repairs, custom fabrication and nautical pool rails. Request a quote.'
 
 export const DEFAULT_SEO: PageMeta = {
   title: HOMEPAGE_TITLE,
@@ -48,7 +48,7 @@ export const ROUTE_SEO: Record<string, PageMeta> = {
     '/gallery',
   ),
   '/store': page(
-    'Store | Order Marine Welding & Custom Metalwork Online',
+    'Custom Nautical Pool Rails & Coastal Mailbox Stands',
     'Shop mailbox installation, pool rails, powder coating, and signature dolphin and nautilus metalwork from Tip Top Welding LLC. Cape Coral and Southwest Florida — measurements confirmed before fabrication or installation.',
     '/store',
   ),

@@ -13,9 +13,8 @@ import Privacy from './pages/privacy'
 import Terms from './pages/terms'
 import NotFound from './pages/notfound'
 
-export default function App() {
+export function AppRoutes() {
   return (
-    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -32,6 +31,9 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
-    </BrowserRouter>
   )
+}
+
+export default function App() {
+  return <BrowserRouter><AppRoutes /></BrowserRouter>
 }
