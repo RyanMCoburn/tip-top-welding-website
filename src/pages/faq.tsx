@@ -12,6 +12,7 @@ export default function FAQ() {
       <section className="bg-navy-900 py-20 md:py-28">
         <div className="mx-auto max-w-3xl px-4 md:px-6 lg:px-8">
           <SectionHeading
+            as="h1"
             title="Frequently Asked Questions"
             subtitle="Answers about mobile welding, aluminum and stainless fabrication, quoting, and on-site service in Southwest Florida."
           />

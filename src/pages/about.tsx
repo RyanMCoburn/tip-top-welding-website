@@ -18,6 +18,7 @@ export default function About() {
         <div className="absolute inset-0 bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800" aria-hidden="true" />
         <div className="relative mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <SectionHeading
+            as="h1"
             title="About Tip Top Welding"
             subtitle="Mobile welding and fabrication for stainless and aluminum projects in Southwest Florida."
             align="left"

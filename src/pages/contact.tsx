@@ -13,6 +13,7 @@ export default function Contact() {
       <section className="bg-navy-900 py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <SectionHeading
+            as="h1"
             title="Contact Us"
             subtitle="Request a quote, send project photos, or call to discuss your marine fabrication project."
           />

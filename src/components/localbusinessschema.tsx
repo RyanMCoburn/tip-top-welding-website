@@ -1,4 +1,4 @@
-import { BRAND } from '../config/brand'
+import { BRAND, SERVICE_AREAS } from '../config/brand'
 import { IMAGE_PATHS } from '../data/images'
 
 /** Shared LocalBusiness description — matches homepage SEO */
@@ -9,6 +9,7 @@ export default function LocalBusinessSchema() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
+    '@id': `${BRAND.url}/#business`,
     name: BRAND.legalName,
     url: BRAND.url,
     telephone: '+1-239-209-4929',
@@ -19,7 +20,7 @@ export default function LocalBusinessSchema() {
       addressRegion: BRAND.region,
       addressCountry: BRAND.country,
     },
-    areaServed: ['Cape Coral FL', 'Fort Myers FL', 'Southwest Florida'],
+    areaServed: SERVICE_AREAS.map(name => ({ '@type': 'Place', name })),
     priceRange: '$$$',
     description: LOCAL_BUSINESS_DESCRIPTION,
     image: `${BRAND.url}${IMAGE_PATHS.hero.marinaHero}`,

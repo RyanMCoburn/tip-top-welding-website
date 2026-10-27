@@ -28,6 +28,14 @@ Live checkout is deliberately disabled until the existing business account has l
 
 ## Publishing and administration
 
-Netlify currently uses manual deployments. Upload a zip containing the contents of `dist`, including the SPA redirects and quote schema. Git-based automatic deployment is not yet connected.
+Netlify currently uses manual deployments. Upload a zip containing the contents of `dist`, including the generated route HTML, redirects, 404 page and quote schema. Git-based automatic deployment is not yet connected.
 
 The Decap `/admin` configuration is retained, but its Git Gateway authentication is not configured. Do not describe the editor as ready until sign-in and a complete content edit/deploy have been tested. No secret keys belong in this repository.
+
+## Search visibility
+
+`npm run build` now prerenders every public route using the same React components as the browser. Each generated HTML page contains its own title, description, canonical URL, social metadata, main content, and business structured data before JavaScript executes. No crawler-only content is served. The client continues mounting normally, preserving URL query defaults and saved theme behavior. The temporary server bundle is removed after each build.
+
+The sitemap is generated from the route metadata and service catalog, excluding noindex policies and missing pages. Netlify serves generated route files first, redirects legacy service slugs with HTTP 301, and returns HTTP 404 for missing routes. Run `npm run test:seo` after building, plus `node --test tests/shop-checkout.test.mjs tests/stripe-orders.test.mjs` for checkout regression checks.
+
+Public-listing audit (October 27, 2026): Birdeye points to `tiptopweldingllc.com`; Waze and My Local Services point to `weldercapecoralfl.com`. These external listings should be checked in their owner accounts and updated to `https://tiptopwelding.com/`. Their hours also differ, so verify current operating hours before editing. Do not claim these changes or Google Business Profile/Search Console setup are completed until owner access and returned state confirm them.

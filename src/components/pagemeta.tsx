@@ -36,7 +36,7 @@ export default function PageMeta() {
     document.title = meta.title
 
     setMeta('content', 'description', meta.description)
-    setMeta('content', 'robots', meta.noindex ? 'noindex, nofollow' : 'index, follow')
+    setMeta('content', 'robots', meta.noindex ? 'noindex, follow' : 'index, follow')
     setLink('canonical', url)
 
     setMeta('content', 'og:title', meta.title, true)

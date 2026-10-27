@@ -24,6 +24,7 @@ export default function Services() {
         <div className="absolute inset-0 bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800" aria-hidden="true" />
         <div className="relative mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <SectionHeading
+            as="h1"
             title="Our Services"
             subtitle="Mobile welding and custom fabrication for aluminum and stainless — boats, bow rails, pontoons, docks, marinas, and custom metal projects."
             align="left"
