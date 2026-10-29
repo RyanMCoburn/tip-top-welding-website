@@ -27,14 +27,14 @@ export const IMAGE_PATHS = {
 
 /** Real gallery photos on disk */
 export const GALLERY_ASSETS = {
-  bowRailWork: IMAGE_PATHS.gallery('bow-rail-work.jpg'),
-  customMailboxWork: IMAGE_PATHS.gallery('custom-mailbox-work.jpg'),
+  bowRailWork: '/images/portfolio/boat-rail-fitted-curved-returns.webp',
+  customMailboxWork: '/images/portfolio/sea-turtle-stand-project.webp',
 } as const
 
 export const PROJECT_ASSETS = {
-  boatRailBefore: IMAGE_PATHS.projects('boat-rail-before.jpg'),
-  boatRailAfter: IMAGE_PATHS.projects('boat-rail-after.jpg'),
-  mailboxFabrication: IMAGE_PATHS.projects('mailbox-fabrication.jpg'),
+  boatRailBefore: '/images/before-after/bow-rail-before.webp',
+  boatRailAfter: '/images/before-after/bow-rail-after.webp',
+  mailboxFabrication: '/images/portfolio/sea-turtle-stand-project.webp',
 } as const
 
 export const BRAND_ASSETS = {

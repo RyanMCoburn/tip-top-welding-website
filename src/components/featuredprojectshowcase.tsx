@@ -36,7 +36,7 @@ export default function FeaturedProjectShowcase({
               <img
                 src={hero.image}
                 alt={hero.imageAlt}
-                className="h-full min-h-[300px] w-full object-cover lg:min-h-[480px]"
+                className="h-full min-h-[300px] w-full object-contain bg-navy-950 lg:min-h-[480px]"
                 loading="lazy"
               />
             </div>
@@ -77,7 +77,7 @@ export default function FeaturedProjectShowcase({
                   <img
                     src={project.image}
                     alt={project.imageAlt}
-                    className="aspect-[16/9] w-full object-cover"
+                    className="aspect-[16/9] w-full object-contain bg-navy-950"
                     loading="lazy"
                   />
                   <div className="p-6">

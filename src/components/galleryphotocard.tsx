@@ -37,7 +37,7 @@ export default function GalleryPhotoCard({
           decoding="async"
           onError={() => setFailedSrc(src)}
         />
-  const frameClass = `gallery-photo-frame block ${fullImageLink || landscape ? 'aspect-[4/3]' : 'aspect-[3/4]'} overflow-hidden rounded-xl bg-navy-950 focus-visible:outline-2 focus-visible:outline-accent`
+  const frameClass = `gallery-photo-frame block ${landscape || !src.startsWith('/images/gallery/') ? 'aspect-[4/3]' : 'aspect-[3/4]'} overflow-hidden rounded-xl bg-navy-950 focus-visible:outline-2 focus-visible:outline-accent`
   return (
     <figure className={`gallery-photo-card group ${className}`}>
       {fullImageLink ? (
