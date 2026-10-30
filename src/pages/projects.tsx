@@ -55,7 +55,8 @@ export default function Projects() {
       </section>
 
       <section id="love-lock-sculpture" className="section-space bg-navy-950">
-        <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 md:px-6 lg:grid-cols-2 lg:gap-12 lg:px-8">
+          <div>
           <p className="text-sm font-semibold uppercase tracking-widest text-accent">Community Public Art | October 2026</p>
           <h2 className="mt-3 text-3xl font-bold text-white md:text-4xl">Love Lock Sculpture - Cultural Park, Cape Coral</h2>
           <p className="mt-5 max-w-3xl text-lg leading-relaxed text-steel-300">
@@ -70,6 +71,23 @@ export default function Projects() {
           <div className="mt-7">
             <CTAButton to="/contact#quote-form" variant="outline">Discuss a Custom Fabrication Project</CTAButton>
           </div>
+        </div>
+          <figure className="mx-auto w-full max-w-xl">
+            <a href="/images/portfolio/love-lock-sculpture-cultural-park.webp" aria-label="View the full Love Lock Sculpture photograph">
+              <img
+                src="/images/portfolio/love-lock-sculpture-cultural-park.webp"
+                srcSet="/images/portfolio/love-lock-sculpture-cultural-park-600.webp 600w, /images/portfolio/love-lock-sculpture-cultural-park.webp 1152w"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                width={1152}
+                height={1536}
+                alt="Tip Top Welding's completed red double-heart Love Lock Sculpture at Cultural Park in Cape Coral, with its heart-shaped Tip Top Welding plaque"
+                className="h-auto w-full rounded-2xl border border-navy-700 object-contain shadow-xl"
+                loading="eager"
+                decoding="async"
+              />
+            </a>
+            <figcaption className="mt-3 text-sm leading-relaxed text-steel-400">The finished Love Lock Sculpture at Cultural Park, fabricated and installed by Tip Top Welding LLC.</figcaption>
+          </figure>
         </div>
       </section>
 
