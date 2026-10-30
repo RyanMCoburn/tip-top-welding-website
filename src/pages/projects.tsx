@@ -54,6 +54,25 @@ export default function Projects() {
         </div>
       </section>
 
+      <section id="love-lock-sculpture" className="section-space bg-navy-950">
+        <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
+          <p className="text-sm font-semibold uppercase tracking-widest text-accent">Community Public Art | October 2026</p>
+          <h2 className="mt-3 text-3xl font-bold text-white md:text-4xl">Love Lock Sculpture - Cultural Park, Cape Coral</h2>
+          <p className="mt-5 max-w-3xl text-lg leading-relaxed text-steel-300">
+            Tip Top Welding LLC proudly donated, fabricated, and installed this custom red double-heart sculpture
+            at Cultural Park in Cape Coral. Its welded metal mesh invites visitors to celebrate love,
+            friendship, family, and lasting memories with personalized locks.
+          </p>
+          <p className="mt-4 max-w-3xl text-steel-400">
+            Installed October 29, 2026. A public dedication is anticipated around Thanksgiving 2026;
+            the date has not yet been confirmed.
+          </p>
+          <div className="mt-7">
+            <CTAButton to="/contact#quote-form" variant="outline">Discuss a Custom Fabrication Project</CTAButton>
+          </div>
+        </div>
+      </section>
+
       {featured && (
         <section className="section-space bg-navy-900">
           <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
