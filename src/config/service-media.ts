@@ -89,19 +89,19 @@ export const SERVICE_MEDIA: Record<string, ServiceMedia> = {
     ]
   },
   "pool-railings": {
-    "src": "/images/portfolio/dolphin-poolside-project.webp",
-    "alt": "Polished Dolphin pool rail beside a residential pool on a display base",
-    "caption": "Dolphin pool rail • poolside display",
+    "src": "/images/portfolio/dolphin-pool-rail-installed.webp",
+    "alt": "Polished Dolphin pool rail mounted into a residential pool deck with finished mounting escutcheons",
+    "caption": "Dolphin pool rail — installed at the pool steps",
     "additional": [
       {
-        "src": "/images/portfolio/nautilus-poolside-project.webp",
-        "alt": "Nautilus rail shown beside a pool on a display base",
-        "caption": "Nautilus • poolside display"
+        "src": "/images/portfolio/nautilus-pool-rail-installed.webp",
+        "alt": "Polished Nautilus pool rail mounted into a residential pool deck with finished mounting escutcheons",
+        "caption": "Nautilus pool rail — installed at the pool steps"
       },
       {
-        "src": "/images/portfolio/sea-turtle-poolside-project.webp",
-        "alt": "Sea Turtle rail during a test fit in a stone-edge pool on a temporary base",
-        "caption": "Sea Turtle • poolside test fit"
+        "src": "/images/portfolio/sea-turtle-pool-rail-installed.webp",
+        "alt": "Polished Sea Turtle pool rail mounted into a residential pool deck with finished mounting escutcheons",
+        "caption": "Sea Turtle pool rail — installed at the pool steps"
       }
     ]
   },

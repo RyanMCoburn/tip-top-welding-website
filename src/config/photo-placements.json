@@ -61,5 +61,12 @@
   "/images/portfolio/sea-turtle-stand-project.webp": "/gallery",
   "/images/gallery/seahorse-mailbox-stand.webp": "/store",
   "/images/portfolio/seahorse-stand-project.webp": "/gallery",
-  "/images/gallery/shrimp-mailbox-stand.webp": "/store"
+  "/images/gallery/shrimp-mailbox-stand.webp": "/store",
+  "/images/portfolio/fibonacci-nautilus-sculpture.webp": "/gallery",
+  "/images/portfolio/boat-dive-ladder.webp": "/gallery",
+  "/images/portfolio/dock-boarding-steps.webp": "/gallery",
+  "/images/portfolio/seaweed-stair-railing.webp": "/gallery",
+  "/images/portfolio/dolphin-pool-rail-installed.webp": "/services/pool-railings",
+  "/images/portfolio/nautilus-pool-rail-installed.webp": "/services/pool-railings",
+  "/images/portfolio/sea-turtle-pool-rail-installed.webp": "/services/pool-railings"
 }

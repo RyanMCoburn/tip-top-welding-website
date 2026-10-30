@@ -81,6 +81,7 @@ export default function Home() {
             <CTAButton to="/projects" variant="outline">
               {CTAS.viewProjects}
             </CTAButton>
+            <CTAButton to="/gallery#fibonacci-nautilus" variant="outline">Fibonacci Nautilus Sculpture</CTAButton>
             <CTAButton to="/gallery" variant="ghost">
               {CTAS.viewGallery}
             </CTAButton>

@@ -1,0 +1,42 @@
+{
+  "reviewed": "2026-10-30",
+  "sculpture": {
+    "photo": "https://www.facebook.com/photo/?fbid=24784446567814126",
+    "post": "https://www.facebook.com/groups/1302994467730765/posts/1516624953034381/",
+    "posted": "2025-08-27",
+    "material": "316L stainless steel",
+    "materialSource": "Owner specified 316L; original Facebook post says 316 stainless steel",
+    "finish": "Flame-kissed patina"
+  },
+  "boardingSteps": {
+    "photo": "https://www.facebook.com/photo/?fbid=5534837479868323",
+    "posted": "2022-07-06"
+  },
+  "otherSources": [
+    {
+      "slug": "fibonacci-nautilus-sculpture",
+      "width": 1536,
+      "height": 2048,
+      "source": "fibonacci-nautilus-original.jpg"
+    },
+    {
+      "slug": "boat-dive-ladder",
+      "width": 756,
+      "height": 756,
+      "source": "../work-photo-library/Marine-Fabrication/boat-dive-ladder.jpg"
+    },
+    {
+      "slug": "dock-boarding-steps",
+      "width": 956,
+      "height": 960,
+      "source": "boarding-steps-original.jpg"
+    },
+    {
+      "slug": "seaweed-stair-railing",
+      "width": 1080,
+      "height": 1150,
+      "source": "../work-photo-library/Architectural-Rails-Stairs/Seaweed-Stair-Railing/seaweed-stair-rail-overview.jpg"
+    }
+  ],
+  "poolInstallationSources": "Existing verified photo-review/installed-pool-rails-oct23.json; deck-mounted posts and escutcheons visually reviewed again."
+}
