@@ -28,6 +28,21 @@ export default function Home() {
     <>
       <HeroBanner />
 
+      <section className="section-space bg-navy-900" aria-labelledby="community-art-heading">
+        <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
+          <p className="text-sm font-semibold uppercase tracking-widest text-accent">Giving Back to Cape Coral</p>
+          <h2 id="community-art-heading" className="mt-3 text-3xl font-bold text-white md:text-4xl">Love Lock Sculpture at Cultural Park</h2>
+          <p className="mt-4 max-w-3xl text-lg leading-relaxed text-steel-300">
+            Tip Top Welding LLC donated, fabricated, and installed a custom red double-heart love lock sculpture
+            at Cultural Park in Cape Coral on October 29, 2026. A public dedication is anticipated around
+            Thanksgiving; the date is pending confirmation.
+          </p>
+          <div className="mt-7">
+            <CTAButton to="/projects#love-lock-sculpture" variant="outline">See the Community Sculpture</CTAButton>
+          </div>
+        </div>
+      </section>
+
       <CapabilityStrip />
       <DesignCollection compact />
       <PoolProjectShowcase />
