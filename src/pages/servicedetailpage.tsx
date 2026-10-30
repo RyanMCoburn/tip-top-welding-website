@@ -2,7 +2,6 @@ import { Link, Navigate, useParams } from 'react-router-dom'
 import CTAButton from '../components/ctabutton'
 import ServiceDetail from '../components/servicedetail'
 import FaqList from '../components/faqlist'
-import MarineWeldingSEO from '../components/marineweldingseo'
 import { CONTACT, CTAS } from '../config/brand'
 import { getServiceBySlug } from '../data/services'
 import { getFaqForService } from '../data/faq'
@@ -51,6 +50,7 @@ export default function ServiceDetailPage() {
       <section className="bg-navy-950">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <ServiceDetail
+            showIntro={false}
             id={service.id}
             title={service.title}
             description={service.description}
@@ -83,8 +83,6 @@ export default function ServiceDetailPage() {
           </div>
         </section>
       )}
-
-      <MarineWeldingSEO />
     </>
   )
 }

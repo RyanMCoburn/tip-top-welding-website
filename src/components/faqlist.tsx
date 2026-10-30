@@ -26,9 +26,9 @@ export default function FaqList({ items, groupByCategory = true }: FaqListProps)
     <div className="space-y-12">
       {categories.map((category) => (
         <div key={category}>
-          <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-steel-300">
+          <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-steel-300">
             {FAQ_CATEGORIES[category]}
-          </h3>
+          </h2>
           <div className="space-y-3">
             {items
               .filter((i) => i.category === category)

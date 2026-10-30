@@ -11,7 +11,9 @@ export default function Layout() {
 
   useEffect(() => {
     if (hash) {
-      const el = document.querySelector(hash)
+      let targetId = hash.slice(1)
+      try { targetId = decodeURIComponent(targetId) } catch { /* Keep literal malformed fragments. */ }
+      const el = document.getElementById(targetId)
       if (el) {
         el.scrollIntoView({ behavior: 'smooth' })
         return

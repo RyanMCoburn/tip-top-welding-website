@@ -1,12 +1,10 @@
 import { Link } from 'react-router-dom'
 import CTAButton from '../components/ctabutton'
 import SectionHeading from '../components/sectionheading'
-import ServiceDetail from '../components/servicedetail'
 import TrustSection from '../components/trustsection'
 import {
   CONTACT,
   CTAS,
-  NAUTICAL_METAL_ART,
   SERVICES,
   SPECIALIST_REASONS,
 } from '../data/sitecontent'
@@ -59,33 +57,17 @@ export default function Services() {
           {SERVICE_GROUPS.map((group) => (
             <section key={group.id} id={group.id} className="scroll-mt-28 pt-12">
               <h2 className="border-b border-accent/40 pb-5 text-3xl font-bold text-white md:text-4xl">{group.title}</h2>
-              {group.ids.map((id) => SERVICES.find((service) => service.id === id)).filter((service) => service !== undefined).map((service, index) => (
-            <ServiceDetail
-              key={service.id}
-              id={service.id}
-              slug={service.slug}
-              title={service.title}
-              description={service.description}
-              commonUseCases={service.commonUseCases}
-              reversed={index % 2 === 1}
-            />
+              <div className="grid gap-6 py-8 md:grid-cols-2 lg:grid-cols-3">
+              {group.ids.map((id) => SERVICES.find((service) => service.id === id)).filter((service) => service !== undefined).map((service) => (
+                <article key={service.id} id={service.id} className="scroll-mt-28 rounded-xl border border-navy-700 bg-navy-900 p-6">
+                  <h3 className="text-xl font-semibold text-white"><Link to={`/services/${service.slug}`} className="hover:text-accent">{service.title}</Link></h3>
+                  <p className="mt-3 leading-relaxed text-steel-400">{service.description}</p>
+                  <Link to={`/services/${service.slug}`} className="mt-5 inline-block font-semibold text-accent">View service details →</Link>
+                </article>
               ))}
+              </div>
             </section>
           ))}
-        </div>
-      </section>
-
-      <section className="bg-navy-900 py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
-          <SectionHeading title={NAUTICAL_METAL_ART.title} subtitle={NAUTICAL_METAL_ART.subtitle} />
-          <div className="grid gap-6 sm:grid-cols-2">
-            {NAUTICAL_METAL_ART.items.map((item) => (
-              <div key={item.title} className="rounded-sm border border-navy-700/80 bg-navy-800/40 p-8">
-                <h3 className="text-xl font-semibold text-white">{item.title}</h3>
-                <p className="mt-3 leading-relaxed text-steel-400">{item.description}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 

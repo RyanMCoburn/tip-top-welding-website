@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "tsc --noEmit && vite build && node scripts/prerender.mjs",
+    "build": "tsc --noEmit && vite build && node scripts/prerender.mjs && node scripts/audit-site.mjs",
     "preview": "vite preview --host 127.0.0.1",
-    "test:seo": "node --test tests/seo.test.mjs"
+    "test:seo": "node --test tests/seo.test.mjs",
+    "test:site": "node scripts/audit-site.mjs"
   },
   "dependencies": {
     "@netlify/blobs": "11.1.4",

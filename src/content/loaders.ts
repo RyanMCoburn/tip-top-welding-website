@@ -1,3 +1,4 @@
+import photoPlacements from '../config/photo-placements.json'
 import { BRAND, SERVICE_AREAS } from '../config/brand'
 import { GALLERY_CATEGORIES, REAL_WORK_PREVIEW } from '../data/images'
 import {
@@ -170,7 +171,13 @@ function mapFallbackCategories(): GalleryCategorySection[] {
 }
 
 export function getGallerySections(): GalleryCategorySection[] {
-  const cmsPhotos = getCmsGalleryPhotos().filter((photo) => hasUsableImage(photo.image))
+  const seen = new Set<string>()
+  const cmsPhotos = getCmsGalleryPhotos().filter((photo) => {
+    const image = normalizeImagePath(photo.image)
+    if (!image || seen.has(image) || ((photoPlacements as Record<string, string>)[image] && (photoPlacements as Record<string, string>)[image] !== '/gallery')) return false
+    seen.add(image)
+    return true
+  })
   const sections = mapFallbackCategories()
 
   return sections.map((section) => {

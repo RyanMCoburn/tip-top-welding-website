@@ -1,13 +1,14 @@
+import { useLocation } from 'react-router-dom'
 import CTAButton from '../components/ctabutton'
 import SectionHeading from '../components/sectionheading'
 import QuoteForm from '../components/quoteform'
 import ContactCards from '../components/contactcards'
 import SocialCTAs from '../components/socialctas'
 import ServiceAreaMap from '../components/serviceareamap'
-import MarineWeldingSEO from '../components/marineweldingseo'
 import { SITE, CONTACT } from '../data/sitecontent'
 
 export default function Contact() {
+  const { search } = useLocation()
   return (
     <>
       <section className="bg-navy-900 py-20 md:py-28">
@@ -38,7 +39,7 @@ export default function Contact() {
             <div className="lg:col-span-3">
               <div className="rounded-sm border border-navy-700/80 bg-navy-800/30 p-6 md:p-10">
                 <h2 className="mb-6 text-2xl font-bold text-white">Request a Quote</h2>
-                <QuoteForm id="quote-form" />
+                <QuoteForm key={search} id="quote-form" />
               </div>
             </div>
           </div>
@@ -57,7 +58,6 @@ export default function Contact() {
 
       <ServiceAreaMap />
 
-      <MarineWeldingSEO />
 
       <section className="bg-navy-900 py-16">
         <div className="mx-auto max-w-7xl px-4 text-center md:px-6 lg:px-8">

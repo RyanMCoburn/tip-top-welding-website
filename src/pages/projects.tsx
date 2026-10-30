@@ -1,21 +1,13 @@
 import CTAButton from '../components/ctabutton'
 import BeforeAfterShowcase from '../components/beforeaftershowcase'
-import GalleryPhotoCard from '../components/galleryphotocard'
 import SectionHeading from '../components/sectionheading'
 import WorkCategoryCard from '../components/workcategorycard'
-import WhyChooseTipTop from '../components/whychoosetiptop'
-import MarineWeldingSEO from '../components/marineweldingseo'
-import ServiceAreaMap from '../components/serviceareamap'
 import {
   getBeforeAfterProjects,
-  getFeaturedProject,
-  getWorkExampleCards,
 } from '../content/loaders'
 import {
-  COMMON_PROJECTS,
   CONTACT,
   CTAS,
-  NAUTICAL_METAL_ART,
   SITE,
   TYPES_OF_WORK,
   WORK_TYPES_PAGE,
@@ -23,8 +15,6 @@ import {
 
 export default function Projects() {
   const beforeAfterProjects = getBeforeAfterProjects()
-  const featured = getFeaturedProject()
-  const workExamples = getWorkExampleCards()
 
   return (
     <>
@@ -54,8 +44,8 @@ export default function Projects() {
         </div>
       </section>
 
-      <section id="love-lock-sculpture" className="section-space bg-navy-950">
-        <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 md:px-6 lg:grid-cols-2 lg:gap-12 lg:px-8">
+      <section id="love-lock-sculpture" className="section-space scroll-mt-28 bg-navy-950">
+        <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <div>
           <p className="text-sm font-semibold uppercase tracking-widest text-accent">Community Public Art | October 2026</p>
           <h2 className="mt-3 text-3xl font-bold text-white md:text-4xl">Love Lock Sculpture - Cultural Park, Cape Coral</h2>
@@ -68,91 +58,14 @@ export default function Projects() {
             Installed October 29, 2026. A public dedication is anticipated around Thanksgiving 2026;
             the date has not yet been confirmed.
           </p>
-          <div className="mt-7">
+          <div className="mt-7 flex flex-wrap gap-4">
+            <CTAButton to="/#community-art-heading" variant="outline">View the Finished Sculpture</CTAButton>
             <CTAButton to="/contact#quote-form" variant="outline">Discuss a Custom Fabrication Project</CTAButton>
           </div>
         </div>
-          <figure className="mx-auto w-full max-w-xl">
-            <a href="/images/portfolio/love-lock-sculpture-cultural-park.webp" aria-label="View the full Love Lock Sculpture photograph">
-              <img
-                src="/images/portfolio/love-lock-sculpture-cultural-park.webp"
-                srcSet="/images/portfolio/love-lock-sculpture-cultural-park-600.webp 600w, /images/portfolio/love-lock-sculpture-cultural-park.webp 1152w"
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                width={1152}
-                height={1536}
-                alt="Tip Top Welding's completed red double-heart Love Lock Sculpture at Cultural Park in Cape Coral, with its heart-shaped Tip Top Welding plaque"
-                className="h-auto w-full rounded-2xl border border-navy-700 object-contain shadow-xl"
-                loading="eager"
-                decoding="async"
-              />
-            </a>
-            <figcaption className="mt-3 text-sm leading-relaxed text-steel-400">The finished Love Lock Sculpture at Cultural Park, fabricated and installed by Tip Top Welding LLC.</figcaption>
-          </figure>
+
         </div>
       </section>
-
-      {featured && (
-        <section className="section-space bg-navy-900">
-          <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
-            <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
-              <GalleryPhotoCard
-                src={featured.image}
-                alt={featured.imageAlt}
-                label={featured.title}
-                landscape
-                hideCaption
-              />
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-accent">{featured.category}</p>
-                <h2 className="mt-2 text-3xl font-bold text-white">{featured.title}</h2>
-                <p className="mt-4 leading-relaxed text-steel-400">{featured.description}</p>
-                {featured.highlights.length > 0 && (
-                  <ul className="mt-6 space-y-2">
-                    {featured.highlights.map((item) => (
-                      <li key={item} className="flex items-start gap-2 text-sm text-steel-300">
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {workExamples.length > 0 && (
-        <section className="section-space bg-navy-900">
-          <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
-            <SectionHeading
-              title="Work Examples"
-              subtitle="Selected architectural fabrication, photographed in its finished setting."
-            />
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {workExamples.map((project) => (
-                <article key={project.id} className="card-premium overflow-hidden rounded-xl">
-                  <GalleryPhotoCard
-                    src={project.image}
-                    alt={project.title}
-                    label={project.title}
-                    placeholder={project.placeholder}
-                    landscape
-                    hideCaption
-                  />
-                  <div className="border-t border-navy-700/60 px-5 py-4">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-accent">{project.category}</p>
-                    <h3 className="mt-1 text-lg font-semibold text-white">{project.title}</h3>
-                    {project.description && (
-                      <p className="mt-2 text-sm leading-relaxed text-steel-400">{project.description}</p>
-                    )}
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
 
       {beforeAfterProjects.length > 0 && (
         <section id="before-after" className="section-space scroll-mt-28 bg-navy-950">
@@ -188,43 +101,6 @@ export default function Projects() {
           </div>
         </div>
       </section>
-
-      <section className="section-space bg-navy-900">
-        <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
-          <SectionHeading title={NAUTICAL_METAL_ART.title} subtitle={NAUTICAL_METAL_ART.subtitle} />
-          <div className="grid gap-6 sm:grid-cols-2">
-            {NAUTICAL_METAL_ART.items.map((item) => (
-              <div key={item.title} className="card-premium rounded-xl p-8">
-                <h3 className="text-xl font-semibold text-white">{item.title}</h3>
-                <p className="mt-3 leading-relaxed text-steel-400">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-space bg-navy-950">
-        <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
-          <SectionHeading
-            title="Additional Work Categories"
-            subtitle="More types of aluminum, stainless, and mobile welding work we discuss and quote individually."
-          />
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {COMMON_PROJECTS.map((project) => (
-              <div key={project.title} className="card-premium border-l-2 border-l-accent px-6 py-5">
-                <h3 className="font-semibold text-white">{project.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-steel-400">{project.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-
-
-      <WhyChooseTipTop />
-      <MarineWeldingSEO />
-      <ServiceAreaMap />
 
       <section className="bg-navy-900 py-16">
         <div className="mx-auto max-w-7xl px-4 text-center md:px-6 lg:px-8">

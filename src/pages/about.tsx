@@ -1,9 +1,6 @@
 import CTAButton from '../components/ctabutton'
 import SectionHeading from '../components/sectionheading'
 import WhyChooseTipTop from '../components/whychoosetiptop'
-import TrustSection from '../components/trustsection'
-import ServiceArea from '../components/servicearea'
-import ServiceAreaMap from '../components/serviceareamap'
 import {
   BRAND,
   COASTAL_SECTION,
@@ -101,12 +98,6 @@ export default function About() {
       </section>
 
       <WhyChooseTipTop />
-
-      <TrustSection />
-
-      <ServiceArea />
-
-      <ServiceAreaMap />
 
       <section className="bg-navy-900 py-16">
         <div className="mx-auto max-w-7xl px-4 text-center md:px-6 lg:px-8">
