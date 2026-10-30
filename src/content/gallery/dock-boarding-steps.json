@@ -1,10 +1,11 @@
 {
-  "slug": "dock-boarding-steps",
-  "title": "Dockside Boarding Steps",
-  "category": "Dock & Marina",
-  "alt": "Custom aluminum boarding steps with a handrail beside a boat on a waterfront dock",
-  "description": "Custom dockside boarding steps with a fitted handrail for access between the dock and boat.",
-  "sortOrder": -39,
   "id": "dock-boarding-steps",
-  "image": "/images/portfolio/dock-boarding-steps.webp"
+  "slug": "dock-boarding-steps",
+  "title": "Custom Yacht Boarding Stairs",
+  "category": "Dock & Marina",
+  "image": "/images/portfolio/dock-boarding-steps.webp",
+  "alt": "Custom aluminum yacht boarding stairs with tubular handrails installed on a waterfront dock",
+  "description": "Custom boarding stairs and handrails fitted beside a yacht for dockside access.",
+  "sortOrder": -120,
+  "published": true
 }

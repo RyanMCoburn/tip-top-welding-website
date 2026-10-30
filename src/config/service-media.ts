@@ -133,8 +133,8 @@ export const SERVICE_MEDIA: Record<string, ServiceMedia> = {
     "caption": "Formed aluminum tank • pipe connections and welded seams"
   },
   "stainless-steel": {
-    "src": "/images/portfolio/sea-turtle-pool-rail-project.webp",
-    "alt": "Polished Sea Turtle-shaped pool rail shown on a temporary display base",
-    "caption": "Sea Turtle pool rail • completed metalwork on a display base"
+    "src": "/images/portfolio/sea-turtle-pool-rail-installed-overview.webp",
+    "alt": "Installed polished stainless steel Sea Turtle pool rail beside a residential pool",
+    "caption": "Sea Turtle pool rail • finished stainless steel installation"
   }
 }

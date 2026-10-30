@@ -1,10 +1,11 @@
 {
+  "id": "seaweed-stair-railing",
   "slug": "seaweed-stair-railing",
   "title": "Seaweed-Pattern Stair Railings",
   "category": "Architectural Rails & Stairs",
-  "alt": "Black custom stair and landing railings with flowing seaweed-pattern infill around a stairwell",
-  "description": "Custom stair and landing railings with flowing seaweed-pattern infill, shown fitted while interior finishing work was underway.",
-  "sortOrder": -38,
-  "id": "seaweed-stair-railing",
-  "image": "/images/portfolio/seaweed-stair-railing.webp"
+  "image": "/images/portfolio/seaweed-stair-railing.webp",
+  "alt": "Black custom staircase railings with flowing seaweed-pattern vertical infill",
+  "description": "Custom stair railings fitted during interior finishing, with flowing seaweed-pattern infill and curved handrail returns.",
+  "sortOrder": -120,
+  "published": true
 }

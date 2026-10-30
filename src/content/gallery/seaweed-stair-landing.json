@@ -1,11 +1,11 @@
 {
-  "image": "/images/portfolio/seaweed-stair-landing.webp",
   "id": "seaweed-stair-landing",
-  "title": "Seaweed Railing — Landing",
-  "category": "Architectural Rails & Stairs",
-  "alt": "Seaweed Railing — Landing — project photograph",
-  "description": "Project photo • railing wrapping an indoor stair landing.",
-  "sortOrder": -19,
   "slug": "seaweed-stair-landing",
-  "published": false
+  "title": "Seaweed-Pattern Landing Railings",
+  "category": "Architectural Rails & Stairs",
+  "image": "/images/portfolio/seaweed-stair-landing.webp",
+  "alt": "Installed black seaweed-pattern railings wrapping an upstairs stair opening",
+  "description": "Matching landing railings fitted around the stairwell while interior finishing work was underway.",
+  "sortOrder": -119,
+  "published": true
 }
