@@ -37,7 +37,7 @@ export const BRAND = {
     'Custom stainless and aluminum work for luxury yachts and coastal homes. Yacht railings, architectural metalwork, and distinctive commissions, with attention to fit, line, and finish.',
   headerTagline: 'Mobile Welding & Custom Fabrication',
   heroServiceLine:
-    'Yacht railwork · Architectural fabrication · Custom coastal designs',
+    'Mobile welding · Aluminum & stainless repair · Cape Coral to Naples',
   heroTags: [
     'Custom Fabrication',
     'Aluminum & Stainless Steel',
@@ -77,6 +77,7 @@ export const CTAS = {
 export const SERVICE_AREAS = [
   'Cape Coral',
   'Fort Myers',
+  'Fort Myers Beach',
   'Sanibel',
   'Captiva',
   'Bonita Springs',

@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from './components/layout'
 import Home from './pages/home'
 import Services from './pages/services'
+import ServiceAreas from './pages/serviceareas'
 import ServiceDetailPage from './pages/servicedetailpage'
 import FAQ from './pages/faq'
 import Projects from './pages/projects'
@@ -19,6 +20,7 @@ export function AppRoutes() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="services" element={<Services />} />
+          <Route path="service-areas" element={<ServiceAreas />} />
           <Route path="services/:slug" element={<ServiceDetailPage />} />
           <Route path="faq" element={<FAQ />} />
           <Route path="projects" element={<Projects />} />

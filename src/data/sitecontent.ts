@@ -54,9 +54,9 @@ import { BRAND, CONTACT, CTAS } from '../config/brand'
 
 export const HOMEPAGE = {
   servicesPreview: {
-    title: 'Custom Fabrication for Yachts & Coastal Properties',
+    title: 'Mobile Welding, Marine Repairs & Custom Fabrication',
     subtitle:
-      'Yacht railwork, stainless fabrication, architectural railings, custom pool rails, and coastal metal art.',
+      'Aluminum and stainless steel welding for boats, pontoons, waterfront properties, architectural railings, and custom nautical pool rails.',
   },
   workPreview: {
     title: 'Types of Work',

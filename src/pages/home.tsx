@@ -18,7 +18,7 @@ import {
 } from '../data/sitecontent'
 
 export default function Home() {
-  const featuredServiceIds = ['bow-rail-repairs','marine-welding','stainless-steel','decorative-rails','custom-gates','pool-railings']
+  const featuredServiceIds = ['mobile-welding','pontoon-repairs','bow-rail-repairs','stainless-steel','decorative-rails','pool-railings']
   const featuredServices = featuredServiceIds.flatMap(id=>SERVICES.filter(service=>service.id===id))
   const featuredWork = getHomeFeaturedWork().slice(0,6)
   const stagger = ['animate-in-delay-1', 'animate-in-delay-2', 'animate-in-delay-3', 'animate-in-delay-4', 'animate-in-delay-5', 'animate-in-delay-6'] as const
@@ -114,6 +114,14 @@ export default function Home() {
               {CTAS.viewServices}
             </CTAButton>
           </div>
+        </div>
+      </section>
+
+      <section className="border-y border-navy-700 bg-navy-950 py-12">
+        <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-white md:text-3xl">Mobile Welding in Cape Coral, Fort Myers &amp; Southwest Florida</h2>
+          <p className="mt-4 max-w-3xl leading-relaxed text-steel-400">Aluminum and stainless steel fabrication and repair at boats, docks, marinas, homes, and businesses when the project allows. We serve Fort Myers Beach, Sanibel, Captiva, Estero, Bonita Springs, Naples, and Marco Island by arrangement.</p>
+          <div className="mt-6 flex flex-wrap gap-4"><CTAButton to="/service-areas" variant="outline">Check Our Service Area</CTAButton><CTAButton href={CONTACT.sms}>Text Photos for a Quote</CTAButton></div>
         </div>
       </section>
 

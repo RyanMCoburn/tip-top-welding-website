@@ -74,6 +74,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+            <Link to="/service-areas" className="mt-4 inline-block text-sm text-accent underline">Mobile service locations &amp; project planning</Link>
           </div>
 
           <div>
