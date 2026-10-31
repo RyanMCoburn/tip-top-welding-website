@@ -37,6 +37,11 @@ export const ROUTE_SEO: Record<string, PageMeta> = {
     'Mobile welding, marine welding, aluminum and stainless fabrication, bow rail repairs, pontoon and skeg repairs, pool railings, dock work, and custom metal projects in Southwest Florida.',
     '/services',
   ),
+  '/service-areas': page(
+    'Mobile Welding Service Areas | Cape Coral, Fort Myers & Naples',
+    'Mobile aluminum and stainless welding in Cape Coral, Fort Myers Beach, Sanibel, Bonita Springs and Naples. Marine repairs and custom fabrication. Send project photos.',
+    '/service-areas',
+  ),
   '/projects': page(
     'Types of Work',
     'Types of welding and fabrication Tip Top Welding handles — bow rails, pontoons, skegs, pool railings, decorative work, and custom aluminum and stainless projects in Southwest Florida.',
